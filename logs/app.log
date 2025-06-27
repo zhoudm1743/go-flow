@@ -1,0 +1,129 @@
+{"env":"development","level":"info","msg":"应用启动","name":"go-flow","port":8080,"time":"2025-06-27 23:48:43","version":"1.0.0"}
+{"database":"go_flow","host":"localhost","level":"info","msg":"数据库配置","port":3306,"time":"2025-06-27 23:48:43"}
+{"db":0,"host":"localhost","level":"info","msg":"Redis配置","port":6379,"time":"2025-06-27 23:48:43"}
+{"fields.level":"debug","level":"info","msg":"日志服务已初始化","time":"2025-06-27 23:48:43"}
+{"level":"info","msg":"应用停止","time":"2025-06-27 23:49:12"}
+{"env":"development","level":"info","msg":"应用启动","name":"go-flow","port":8080,"time":"2025-06-27 23:54:18","version":"1.0.0"}
+{"database":"go_flow","host":"localhost","level":"info","msg":"数据库配置","port":3306,"time":"2025-06-27 23:54:18"}
+{"db":0,"host":"localhost","level":"info","msg":"Redis配置","port":6379,"time":"2025-06-27 23:54:19"}
+{"fields.level":"info","level":"info","msg":"日志服务已初始化","time":"2025-06-27 23:54:19"}
+[36mINFO[0m[2025-06-27 23:56:48] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO[0m[2025-06-27 23:56:48] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO[0m[2025-06-27 23:56:48] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO[0m[2025-06-27 23:56:48] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO[0m[2025-06-27 23:57:20] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO[0m[2025-06-27 23:57:20] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO[0m[2025-06-27 23:57:20] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO[0m[2025-06-27 23:57:20] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO[0m[2025-06-27 23:57:23] 应用停止                                         
+[36mINFO   [0m[2025-06-27 23:58:20] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-27 23:58:20] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-27 23:58:20] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-27 23:58:20] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-27 23:58:20] 这是信息日志（蓝色）                                   
+[33mWARNING[0m[2025-06-27 23:58:20] 这是警告日志（黄色）                                   
+[31mERROR  [0m[2025-06-27 23:58:20] 这是错误日志（红色）                                    [31mdemo[0m=true
+[36mINFO   [0m[2025-06-27 23:58:26] 应用停止                                         
+{"level":"info","msg":"应用停止","time":"2025-06-27 23:59:04"}
+[36mINFO   [0m[2025-06-27 23:59:06] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-27 23:59:06] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-27 23:59:06] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-27 23:59:06] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-27 23:59:13] 应用停止                                         
+[36mINFO[0m[2025-06-28 00:08:17] 应用停止                                         
+[36mINFO   [0m[2025-06-28 00:13:17] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 00:13:17] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 00:13:17] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:13:17] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 00:13:43] 应用停止                                         
+[36mINFO   [0m[2025-06-28 00:21:53] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 00:21:53] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 00:21:53] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 00:21:53] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 00:21:53] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 00:21:53] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:21:53] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 00:21:53] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 00:30:33] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 00:30:33] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:30:33] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 00:30:35] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 00:30:35] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 00:30:35] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 00:30:35] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:30:35] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 00:30:35] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 00:30:35] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 00:32:27] 应用停止                                         
+[36mINFO   [0m[2025-06-28 00:32:27] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 00:32:27] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 00:40:31] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 00:40:31] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:40:31] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 00:40:33] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 00:40:33] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 00:40:33] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 00:40:33] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:40:33] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 00:40:33] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 00:40:33] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 00:40:50] 应用停止                                         
+[36mINFO   [0m[2025-06-28 00:40:50] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 00:40:50] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 00:42:30] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:46:14] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 00:46:14] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:46:14] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 00:46:16] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 00:46:16] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 00:46:16] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 00:46:16] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 00:46:16] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 00:46:16] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 00:46:16] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 00:46:22] 应用停止                                         
+[36mINFO   [0m[2025-06-28 00:46:22] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 00:46:22] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 00:47:15] 应用停止                                         
+[36mINFO   [0m[2025-06-28 00:47:15] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 01:01:40] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 01:01:40] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 01:01:40] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 01:01:40] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 01:01:40] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 01:01:40] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 01:01:41] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 01:01:41] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 01:01:41] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 01:01:41] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 01:01:41] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 01:01:41] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 01:01:41] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 01:01:41] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 01:01:41] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 01:01:55] GET /ping 200 0s                              [36mclient_ip[0m=::1 [36mdata_length[0m=18 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/ping [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T01:01:55+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 01:01:55]                                              
+[36mINFO   [0m[2025-06-28 01:02:54] 应用停止                                         
+[36mINFO   [0m[2025-06-28 01:02:54] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 01:02:54] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 01:02:54] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 01:02:54] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 01:04:16] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 01:04:16] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 01:04:16] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 01:04:16] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 01:04:16] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 01:04:16] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 01:04:17] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 01:04:17] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 01:04:17] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 01:04:17] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 01:04:17] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 01:04:17] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 01:04:17] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 01:04:17] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 01:04:17] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 01:04:28] GET / 404 18.3µs                              [36mclient_ip[0m=::1 [36mdata_length[0m=-1 [36mlatency[0m=18.3µs [36mmethod[0m=GET [36mpath[0m=/ [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=404 [36mtimestamp[0m=2025-06-28T01:04:28+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 01:04:28]                                              
+[36mINFO   [0m[2025-06-28 01:04:38] GET /ping 200 0s                              [36mclient_ip[0m=::1 [36mdata_length[0m=18 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/ping [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T01:04:38+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 01:04:38]                                              
