@@ -2,8 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	systemAdminRoutes "github.com/zhoudm1743/go-flow/app/admin/routes/system"
-	testRoutes "github.com/zhoudm1743/go-flow/app/admin/routes/test"
+	systemRoutes "github.com/zhoudm1743/go-flow/app/admin/routes/system"
 	httpCore "github.com/zhoudm1743/go-flow/core/http"
 	"go.uber.org/fx"
 )
@@ -37,11 +36,7 @@ func NewAdminRouteRegistrator(params struct {
 var Module = fx.Options(
 	// 批量提供路由组
 	fx.Provide(fx.Annotate(
-		testRoutes.NewTestGroup,
-		fx.ResultTags(`group:"admin_route_groups"`),
-	)),
-	fx.Provide(fx.Annotate(
-		systemAdminRoutes.NewAdminGroup,
+		systemRoutes.NewAdminGroup,
 		fx.ResultTags(`group:"admin_route_groups"`),
 	)),
 	fx.Provide(NewAdminRouteRegistrator),

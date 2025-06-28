@@ -4,6 +4,7 @@ go 1.24.0
 
 require (
 	github.com/gin-gonic/gin v1.10.1
+	github.com/mojocn/base64Captcha v1.3.8
 	github.com/redis/go-redis/v9 v9.11.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/sirupsen/logrus v1.9.3
@@ -16,7 +17,6 @@ require (
 
 require (
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0 // indirect
-	github.com/mojocn/base64Captcha v1.3.8 // indirect
 	golang.org/x/image v0.23.0 // indirect
 	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
 )

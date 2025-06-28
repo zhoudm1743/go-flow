@@ -8,7 +8,7 @@ import (
 	"github.com/zhoudm1743/go-flow/core/config"
 	"github.com/zhoudm1743/go-flow/core/cron"
 	"github.com/zhoudm1743/go-flow/core/database"
-	"github.com/zhoudm1743/go-flow/core/event"
+	"github.com/zhoudm1743/go-flow/core/domain"
 	"github.com/zhoudm1743/go-flow/core/http"
 	"github.com/zhoudm1743/go-flow/core/logger"
 	"github.com/zhoudm1743/go-flow/pkg"
@@ -21,7 +21,7 @@ var Module = fx.Options(
 	database.Module,
 	cache.Module,
 	cron.Module,
-	event.Module,
+	domain.Module,
 	pkg.Module,
 	http.Module,
 

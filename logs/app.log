@@ -1571,3 +1571,292 @@ C:/Program Files/Go/src/runtime/asm_amd64.s:1700 (0xd37980)
 [36mINFO   [0m[2025-06-28 11:19:53] 日志服务已初始化                                      [36mfields.level[0m=info
 [36mINFO   [0m[2025-06-28 11:19:53] 数据库连接测试成功                                    
 [36mINFO   [0m[2025-06-28 11:19:53] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 11:27:36] 应用停止                                         
+[36mINFO   [0m[2025-06-28 11:27:36] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 11:27:36] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 11:27:36] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 11:27:36] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 11:27:36] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 11:27:36] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 11:27:36] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 11:27:36] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 11:27:36] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 11:27:36] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 11:27:36] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 11:27:36] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 11:27:36] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 11:50:51] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 11:50:51] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 11:50:51] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 11:50:51] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /admin/system/admin/all   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).all-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /admin/system/admin/list  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).list-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /admin/system/admin/detail --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).detail-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] POST   /admin/system/admin/add   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).add-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] POST   /admin/system/admin/edit  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).edit-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] POST   /admin/system/admin/delete --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).delete-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] POST   /admin/system/admin/change-status --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).changeStatus-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:50:51] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 11:50:51] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 11:50:51] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 11:50:51] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 11:50:51] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 11:50:51] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 11:50:52] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 11:50:52] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 11:50:52] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 11:50:52] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 11:50:52] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 11:50:52] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 11:50:52] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 11:50:52] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 11:50:52] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 11:50:56] 应用停止                                         
+[36mINFO   [0m[2025-06-28 11:50:56] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 11:50:56] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 11:50:56] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 11:50:56] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 11:50:56] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 11:50:56] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 11:50:56] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 11:50:56] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 11:50:56] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 11:50:56] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 11:50:56] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 11:50:56] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 11:50:56] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 11:51:07] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 11:51:07] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 11:51:07] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 11:51:07] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /admin/system/admin/all   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).all-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /admin/system/admin/list  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).list-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] GET    /admin/system/admin/detail --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).detail-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] POST   /admin/system/admin/add   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).add-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] POST   /admin/system/admin/edit  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).edit-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] POST   /admin/system/admin/delete --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).delete-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] [GIN-debug] POST   /admin/system/admin/change-status --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).changeStatus-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:51:07] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 11:51:07] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 11:51:07] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 11:51:07] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 11:51:07] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 11:51:07] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 11:51:09] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 11:51:09] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 11:51:09] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 11:51:09] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 11:51:09] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 11:51:09] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 11:51:09] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 11:51:09] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 11:51:09] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 11:56:00] 应用停止                                         
+[36mINFO   [0m[2025-06-28 11:56:00] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 11:56:00] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 11:56:00] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 11:56:00] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 11:56:00] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 11:56:00] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 11:56:00] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 11:56:00] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 11:56:00] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 11:56:00] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 11:56:00] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 11:56:00] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 11:56:00] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 11:56:02] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 11:56:03] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 11:56:03] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 11:56:03] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] GET    /admin/system/admin/all   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).all-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] GET    /admin/system/admin/list  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).list-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] GET    /admin/system/admin/detail --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).detail-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] POST   /admin/system/admin/add   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).add-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] POST   /admin/system/admin/edit  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).edit-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] POST   /admin/system/admin/delete --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).delete-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] [GIN-debug] POST   /admin/system/admin/change-status --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).changeStatus-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 11:56:03] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 11:56:03] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 11:56:03] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 11:56:03] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 11:56:03] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 11:56:03] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 11:56:04] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 11:56:04] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 11:56:04] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 11:56:04] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 11:56:04] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 11:56:04] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 11:56:04] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 11:56:04] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 11:56:04] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 12:06:34] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 12:06:34] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 12:06:34] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 12:06:34] DDD领域模块初始化完成map[event_handlers:[entity.created entity.updated entity.deleted]] 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] GET    /admin/system/admin/all   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).all-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] GET    /admin/system/admin/list  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).list-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] GET    /admin/system/admin/detail --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).detail-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] POST   /admin/system/admin/add   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).add-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] POST   /admin/system/admin/edit  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).edit-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] POST   /admin/system/admin/delete --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).delete-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] [GIN-debug] POST   /admin/system/admin/change-status --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).changeStatus-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:34] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 12:06:36] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 12:06:36] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 12:06:36] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 12:06:36] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 12:06:36] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 12:06:36] HTTP 服务已启动，地址: http://localhost:8080         
+[31mERROR  [0m[2025-06-28 12:06:36] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 12:06:36] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 12:06:36] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 12:06:36] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 12:06:41] 应用停止                                         
+[36mINFO   [0m[2025-06-28 12:06:41] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 12:06:41] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 12:06:41] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 12:06:41] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 12:06:41] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 12:06:41] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 12:06:41] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 12:06:48] 应用停止                                         
+[36mINFO   [0m[2025-06-28 12:06:48] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 12:06:48] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 12:06:48] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 12:06:48] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 12:06:48] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 12:06:48] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 12:06:48] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 12:06:48] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 12:06:48] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 12:06:48] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 12:06:48] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 12:06:48] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 12:06:48] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 12:06:50] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 12:06:50] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 12:06:50] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 12:06:50] DDD领域模块初始化完成map[event_handlers:[entity.created entity.updated entity.deleted]] 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] GET    /admin/system/admin/all   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).all-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] GET    /admin/system/admin/list  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).list-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] GET    /admin/system/admin/detail --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).detail-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] POST   /admin/system/admin/add   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).add-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] POST   /admin/system/admin/edit  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).edit-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] POST   /admin/system/admin/delete --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).delete-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] [GIN-debug] POST   /admin/system/admin/change-status --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).changeStatus-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:06:50] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 12:06:52] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 12:06:52] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 12:06:52] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 12:06:52] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 12:06:52] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 12:06:52] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 12:06:52] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 12:06:52] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 12:06:52] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 12:06:55] GET /admin/test/test 404 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=-1 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=404 [36mtimestamp[0m=2025-06-28T12:06:55+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 12:06:55]                                              
+[36mINFO   [0m[2025-06-28 12:07:16] GET / 404 0s                                  [36mclient_ip[0m=::1 [36mdata_length[0m=-1 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/ [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=404 [36mtimestamp[0m=2025-06-28T12:07:16+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 12:07:16]                                              
+[36mINFO   [0m[2025-06-28 12:07:34] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 12:07:34] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 12:07:34] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 12:07:34] DDD领域模块初始化完成map[event_handlers:[entity.created entity.updated entity.deleted]] 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] GET    /admin/system/admin/all   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).all-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] GET    /admin/system/admin/list  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).list-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] GET    /admin/system/admin/detail --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).detail-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] POST   /admin/system/admin/add   --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).add-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] POST   /admin/system/admin/edit  --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).edit-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] POST   /admin/system/admin/delete --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).delete-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] [GIN-debug] POST   /admin/system/admin/change-status --> github.com/zhoudm1743/go-flow/app/admin/routes/system.(*adminRoutes).changeStatus-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 12:07:34] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 12:07:35] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 12:07:35] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 12:07:35] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 12:07:35] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 12:07:35] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 12:07:35] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 12:07:35] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 12:07:36] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 12:07:36] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 12:08:03] GET /health 200 0s                            [36mclient_ip[0m=::1 [36mdata_length[0m=93 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/health [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T12:08:03+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 12:08:03]                                              
+[36mINFO   [0m[2025-06-28 12:08:40] 应用停止                                         
+[36mINFO   [0m[2025-06-28 12:08:40] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 12:08:40] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 12:08:40] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 12:08:40] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 12:08:40] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 12:08:40] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 12:08:40] Cron模块停止成功                                   
