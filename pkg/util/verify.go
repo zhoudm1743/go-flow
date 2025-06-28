@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"mime/multipart"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
@@ -181,5 +182,50 @@ func (vu verifyUtil) ValidateStruct(obj any) error {
 		}
 		return response.ParamsValidError.MakeData(err.Error())
 	}
+	return nil
+}
+
+// Verify 验证参数 使用validator进行验证
+func (vu verifyUtil) Verify(c *gin.Context, obj ...any) (e error) {
+	method := c.Request.Method
+	contentType := c.GetHeader("Content-Type")
+
+	// 如果没有传入任何对象，直接返回
+	if len(obj) == 0 {
+		return nil
+	}
+
+	// 验证每个对象，返回第一个错误
+	for _, o := range obj {
+		var err error
+
+		switch method {
+		case "GET", "DELETE":
+			// GET和DELETE请求通常使用Query参数
+			err = vu.VerifyQuery(c, o)
+		case "POST", "PUT", "PATCH":
+			// POST、PUT、PATCH请求根据Content-Type选择验证方式
+			switch {
+			case contentType == "application/json" || contentType == "application/json; charset=utf-8":
+				err = vu.VerifyJSON(c, o)
+			case contentType == "application/x-www-form-urlencoded":
+				err = vu.VerifyPostForm(c, o)
+			case strings.HasPrefix(contentType, "multipart/form-data"):
+				err = vu.VerifyForm(c, o)
+			default:
+				// 默认尝试JSON验证
+				err = vu.VerifyJSON(c, o)
+			}
+		default:
+			// 其他请求方法默认使用Body验证
+			err = vu.VerifyBody(c, o)
+		}
+
+		// 如果验证失败，立即返回错误
+		if err != nil {
+			return err
+		}
+	}
+
 	return nil
 }

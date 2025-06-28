@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
+	systemAdminRoutes "github.com/zhoudm1743/go-flow/app/admin/routes/system"
 	testRoutes "github.com/zhoudm1743/go-flow/app/admin/routes/test"
 	httpCore "github.com/zhoudm1743/go-flow/core/http"
 	"go.uber.org/fx"
@@ -14,25 +15,34 @@ func (f RouteRegistratorFunc) RegisterRoutes(engine *gin.Engine) error {
 	return f(engine)
 }
 
-// RouteRegistratorResult 路由注册器结果结构
-type RouteRegistratorResult struct {
+// NewAdminRouteRegistrator 创建admin路由注册器，批量注册所有路由组
+func NewAdminRouteRegistrator(params struct {
+	fx.In
+	Groups []httpCore.Group `group:"admin_route_groups"`
+}) struct {
 	fx.Out
 	Registrator httpCore.RouteRegistrator `group:"route_registrators"`
-}
-
-// NewAdminRouteRegistrator 创建admin路由注册器 - 简化为一个函数
-func NewAdminRouteRegistrator(group httpCore.Group) RouteRegistratorResult {
-	return RouteRegistratorResult{
+} {
+	return struct {
+		fx.Out
+		Registrator httpCore.RouteRegistrator `group:"route_registrators"`
+	}{
 		Registrator: RouteRegistratorFunc(func(engine *gin.Engine) error {
-			return httpCore.RegisterModuleRoutes(engine, "admin", []httpCore.Group{
-				group, // 🎉 终极简化！
-			})
+			return httpCore.RegisterModuleRoutes(engine, "admin", params.Groups)
 		}),
 	}
 }
 
 // Module FX模块定义
 var Module = fx.Options(
-	fx.Provide(testRoutes.NewTestGroup),
+	// 批量提供路由组
+	fx.Provide(fx.Annotate(
+		testRoutes.NewTestGroup,
+		fx.ResultTags(`group:"admin_route_groups"`),
+	)),
+	fx.Provide(fx.Annotate(
+		systemAdminRoutes.NewAdminGroup,
+		fx.ResultTags(`group:"admin_route_groups"`),
+	)),
 	fx.Provide(NewAdminRouteRegistrator),
 )
