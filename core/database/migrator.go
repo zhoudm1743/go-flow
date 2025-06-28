@@ -1,10 +1,7 @@
 package database
 
 import (
-	"context"
-
 	"github.com/zhoudm1743/go-flow/core/logger"
-	"go.uber.org/fx"
 )
 
 // Migrator 数据库迁移器
@@ -35,15 +32,3 @@ func (m *Migrator) AutoMigrate() error {
 	m.logger.Info("数据库迁移完成")
 	return nil
 }
-
-// MigratorModule 迁移器模块
-var MigratorModule = fx.Options(
-	fx.Provide(NewMigrator),
-	fx.Invoke(func(migrator *Migrator, lifecycle fx.Lifecycle) {
-		lifecycle.Append(fx.Hook{
-			OnStart: func(ctx context.Context) error {
-				return migrator.AutoMigrate()
-			},
-		})
-	}),
-)

@@ -57,3 +57,38 @@ func generateRequestID() string {
 	// 在生产环境中应该使用更好的 UUID 生成器
 	return "req_" + fmt.Sprintf("%d", time.Now().UnixNano())
 }
+
+// AuthMiddleware 认证中间件
+func AuthMiddleware(c *gin.Context) {
+	// 简单的认证检查示例
+	token := c.GetHeader("Authorization")
+	if token == "" {
+		c.JSON(http.StatusUnauthorized, gin.H{
+			"code":    401,
+			"message": "未授权访问",
+		})
+		c.Abort()
+		return
+	}
+
+	// 这里可以添加实际的token验证逻辑
+	// 例如：验证JWT token，检查用户权限等
+
+	c.Next()
+}
+
+// AdminMiddleware 管理员权限中间件
+func AdminMiddleware(c *gin.Context) {
+	// 检查管理员权限
+	userRole := c.GetHeader("X-User-Role")
+	if userRole != "admin" {
+		c.JSON(http.StatusForbidden, gin.H{
+			"code":    403,
+			"message": "需要管理员权限",
+		})
+		c.Abort()
+		return
+	}
+
+	c.Next()
+}

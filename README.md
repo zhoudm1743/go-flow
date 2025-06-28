@@ -1,6 +1,6 @@
 # Go-Flow
 
-一个基于 Go 语言的现代化微服务框架，集成了日志、数据库、缓存等核心功能。
+一个基于 Go 语言的现代化微服务框架，集成了声明式路由、日志、数据库、缓存等核心功能。
 
 ## 🚀 功能特性
 
@@ -10,9 +10,18 @@
 - **📝 日志服务** - 基于 Logrus 的结构化日志，支持文件轮转和颜色输出
 - **💾 数据库服务** - 基于 GORM 的 ORM，支持 MySQL，包含自动迁移
 - **🚄 缓存服务** - 基于 Redis 的缓存服务，封装常用操作（**全新 API 设计**）
+- **🌐 HTTP 路由** - 声明式路由系统，支持依赖注入和中间件链（**全新设计**）
 - **🔄 依赖注入** - 基于 Fx 的依赖注入框架
 
 ### 📋 已实现功能
+
+#### 🌐 HTTP 路由系统 (core/http) - 全新设计
+- ✅ **声明式路由定义**: 简洁的路由组声明
+- ✅ **依赖注入支持**: Fx 自动注入服务依赖
+- ✅ **模块化设计**: 每个模块自管理路由
+- ✅ **中间件链**: 支持可变参数处理器 `handlers ...RouteHandler`
+- ✅ **函数式架构**: 零冗余的函数式设计
+- ✅ **类型安全**: 编译时检查所有依赖关系
 
 #### 配置服务 (core/config)
 - ✅ YAML 配置文件支持
@@ -50,6 +59,15 @@
 
 ```
 go-flow/
+├── app/                     # 应用模块
+│   └── admin/               # 管理模块
+│       ├── routes/          # 路由定义
+│       │   ├── enter.go     # 路由注册器
+│       │   └── test/        # 测试路由模块
+│       │       └── test.go  # 测试路由实现
+│       ├── service/         # 业务服务
+│       │   └── test/        # 测试服务
+│       └── schemas/         # 数据结构
 ├── boot/                    # 启动模块
 │   └── bootstrap.go         # 应用启动配置
 ├── core/                    # 核心服务
@@ -58,15 +76,20 @@ go-flow/
 │   ├── logger/              # 日志服务
 │   │   ├── logger.go        # 主日志服务
 │   │   └── fx_adapter.go    # Fx 日志适配器
+│   ├── http/                # 🌐 HTTP 路由系统 - 全新设计
+│   │   ├── router.go        # 声明式路由核心
+│   │   ├── service.go       # HTTP 服务
+│   │   ├── module.go        # Fx 模块定义
+│   │   └── middleware.go    # 中间件支持
 │   ├── database/            # 数据库服务
 │   │   ├── gorm.go          # GORM 配置
 │   │   ├── models.go        # 数据模型
 │   │   ├── migrator.go      # 数据库迁移
+│   │   ├── module.go        # Fx 模块定义
 │   │   └── service.go       # 数据库服务示例
 │   └── cache/               # 🔥 缓存服务 - 全新设计
 │       ├── redis.go         # Redis 客户端（双API设计）
-│       ├── helper.go        # 缓存助手（高级功能）
-│       └── service.go       # 缓存服务示例
+│       └── helper.go        # 缓存助手（高级功能）
 ├── config/                  # 配置文件
 │   └── config.yaml          # 主配置文件
 ├── logs/                    # 日志文件目录
@@ -137,14 +160,141 @@ go run main.go
 ```
 INFO   [2025-06-28 00:30:33] 数据库连接成功
 INFO   [2025-06-28 00:30:33] Redis 连接成功
-INFO   [2025-06-28 00:30:33] 开始数据库自动迁移
-INFO   [2025-06-28 00:30:35] 数据库迁移完成
-INFO   [2025-06-28 00:30:35] 应用启动
-INFO   [2025-06-28 00:30:35] 数据库连接测试成功
-INFO   [2025-06-28 00:30:35] Redis 连接测试成功
+INFO   [2025-06-28 00:30:33] [GIN-debug] GET    /admin/test/test          
+INFO   [2025-06-28 00:30:33] [GIN-debug] GET    /admin/test/test-multi    
+INFO   [2025-06-28 00:30:33] [GIN-debug] POST   /admin/test/test          
+INFO   [2025-06-28 00:30:33] HTTP 服务已启动，地址: http://localhost:8080
+```
+
+### 4. 测试API端点
+
+```bash
+# 测试基础路由
+curl http://localhost:8080/admin/test/test
+
+# 测试中间件链路由
+curl http://localhost:8080/admin/test/test-multi
+
+# 测试POST路由
+curl -X POST http://localhost:8080/admin/test/test
 ```
 
 ## 💡 使用示例
+
+### 🌐 声明式路由系统 - 全新设计
+
+#### 🎯 路由模块定义（极简设计）
+
+```go
+// app/admin/routes/test/test.go
+package test
+
+import (
+    "net/http"
+    "github.com/gin-gonic/gin"
+    "github.com/zhoudm1743/go-flow/app/admin/service/test"
+    httpCore "github.com/zhoudm1743/go-flow/core/http"
+)
+
+type testRoutes struct {
+    srv test.TestService
+}
+
+// NewTestGroup fx Provider函数，自动注入TestService并返回配置好的Group
+func NewTestGroup(srv test.TestService) httpCore.Group {
+    return httpCore.NewGroup("/test", 
+        func() interface{} {
+            return &testRoutes{srv: srv}
+        }, 
+        regTest,
+    )
+}
+
+// regTest 注册测试路由（内部函数）
+func regTest(rg *httpCore.BaseGroup, instance interface{}) error {
+    r := instance.(*testRoutes)
+    
+    // 🔸 单个处理器
+    rg.GET("/test", r.test)
+    
+    // 🔸 中间件链（多个处理器）
+    rg.GET("/test-multi", 
+        func(c *gin.Context) {
+            c.Set("middleware_data", "from middleware")
+            c.Next()
+        },
+        r.testMulti, // 主处理器
+    )
+    
+    // 🔸 POST 路由
+    rg.POST("/test", r.testPost)
+    
+    return nil
+}
+
+func (r *testRoutes) test(c *gin.Context) {
+    res := r.srv.Test()
+    c.JSON(http.StatusOK, res)
+}
+```
+
+#### 🚀 路由注册器（函数式设计）
+
+```go
+// app/admin/routes/enter.go
+package routes
+
+import (
+    "github.com/gin-gonic/gin"
+    testRoutes "github.com/zhoudm1743/go-flow/app/admin/routes/test"
+    httpCore "github.com/zhoudm1743/go-flow/core/http"
+    "go.uber.org/fx"
+)
+
+// RouteRegistratorFunc 函数类型实现RouteRegistrator接口
+type RouteRegistratorFunc func(*gin.Engine) error
+
+func (f RouteRegistratorFunc) RegisterRoutes(engine *gin.Engine) error {
+    return f(engine)
+}
+
+// NewAdminRouteRegistrator 创建admin路由注册器 - 简化为一个函数
+func NewAdminRouteRegistrator(group httpCore.Group) RouteRegistratorResult {
+    return RouteRegistratorResult{
+        Registrator: RouteRegistratorFunc(func(engine *gin.Engine) error {
+            return httpCore.RegisterModuleRoutes(engine, "admin", []httpCore.Group{
+                group, // 🎉 终极简化！
+            })
+        }),
+    }
+}
+
+// Module FX模块定义
+var Module = fx.Options(
+    fx.Provide(testRoutes.NewTestGroup),
+    fx.Provide(NewAdminRouteRegistrator),
+)
+```
+
+#### 🌟 路由系统特性
+
+1. **🎯 零冗余设计**
+   - 路由模块：一个函数 `NewTestGroup`
+   - 路由注册器：一个函数类型 + 一个构造函数
+   
+2. **🔄 完全自动化**
+   - Fx 自动注入 `TestService` 到路由模块
+   - 路由注册器自动收集并注册所有路由
+
+3. **⚡ 极致简洁**
+   ```go
+   // 添加新路由模块只需要：
+   fx.Provide(newRoutes.NewUserGroup),  // 提供路由组
+   ```
+
+4. **🛡️ 类型安全**
+   - 编译时检查所有依赖关系
+   - 函数签名保证接口一致性
 
 ### 数据库操作
 
@@ -327,9 +477,17 @@ logger.Info("全局日志信息")
 logger.WithField("key", "value").Warn("全局警告")
 ```
 
-## 🌟 新缓存 API 设计亮点
+## 🌟 设计亮点
 
-### 双 API 设计理念
+### HTTP 路由系统
+
+1. **🎯 声明式设计** - 路由定义简洁明了
+2. **⚡ 零冗余架构** - 每行代码都有存在价值
+3. **🔄 完全自动化** - Fx 框架处理所有依赖注入
+4. **🛡️ 类型安全** - 编译时验证所有依赖关系
+5. **📦 模块化** - 每个模块自管理路由和依赖
+
+### 缓存双 API 设计
 
 1. **🌟 默认方法** - 无需传递 `context`，使用简洁
    ```go
@@ -347,15 +505,16 @@ logger.WithField("key", "value").Warn("全局警告")
 
 ### 设计优势
 
-- ✅ **简洁性**: 大部分场景下无需关心 context
-- ✅ **灵活性**: 需要超时控制时可使用 Ctx 方法
+- ✅ **简洁性**: 大部分场景下无需关心复杂配置
+- ✅ **灵活性**: 需要精细控制时提供完整功能
 - ✅ **兼容性**: 满足不同使用场景的需求
-- ✅ **一致性**: 所有方法都遵循相同的命名规范
-- ✅ **功能性**: 支持 Redis 所有数据类型操作
+- ✅ **一致性**: 所有API都遵循相同的设计理念
+- ✅ **扩展性**: 模块化设计便于功能扩展
 
 ## 📦 依赖
 
 - **Fx** - 依赖注入框架
+- **Gin** - HTTP Web 框架
 - **Viper** - 配置管理
 - **Logrus** - 结构化日志
 - **Lumberjack** - 日志轮转
@@ -364,7 +523,24 @@ logger.WithField("key", "value").Warn("全局警告")
 
 ## 🔄 扩展
 
-该框架设计为模块化，可以轻松添加新的服务：
+该框架设计为模块化，可以轻松添加新的功能：
+
+### 添加新路由模块
+
+1. 在 `app/admin/routes/` 下创建新模块目录
+2. 实现 `NewXxxGroup` 函数
+3. 在 `enter.go` 中添加 Provider
+
+```go
+// Module FX模块定义
+var Module = fx.Options(
+    fx.Provide(testRoutes.NewTestGroup),
+    fx.Provide(userRoutes.NewUserGroup),  // 🆕 新路由模块
+    fx.Provide(NewAdminRouteRegistrator),
+)
+```
+
+### 添加新服务模块
 
 1. 在 `core/` 下创建新服务包
 2. 实现服务接口和 Fx 模块

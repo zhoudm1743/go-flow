@@ -24,7 +24,7 @@ func (l *FxLogger) LogEvent(event fxevent.Event) {
 		l.logger.WithFields(logrus.Fields{
 			"caller": e.FunctionName,
 			"callee": e.CallerName,
-		}).Info("OnStart hook executing")
+		}).Info("正在执行OnStart钩子")
 
 	case *fxevent.OnStartExecuted:
 		if e.Err != nil {
@@ -32,20 +32,20 @@ func (l *FxLogger) LogEvent(event fxevent.Event) {
 				"caller": e.FunctionName,
 				"callee": e.CallerName,
 				"error":  e.Err.Error(),
-			}).Error("OnStart hook failed")
+			}).Error("OnStart钩子执行失败")
 		} else {
 			l.logger.WithFields(logrus.Fields{
 				"caller":  e.FunctionName,
 				"callee":  e.CallerName,
 				"runtime": e.Runtime.String(),
-			}).Info("OnStart hook executed")
+			}).Info("OnStart钩子执行完成")
 		}
 
 	case *fxevent.OnStopExecuting:
 		l.logger.WithFields(logrus.Fields{
 			"caller": e.FunctionName,
 			"callee": e.CallerName,
-		}).Info("OnStop hook executing")
+		}).Info("正在执行OnStop钩子")
 
 	case *fxevent.OnStopExecuted:
 		if e.Err != nil {
@@ -53,13 +53,13 @@ func (l *FxLogger) LogEvent(event fxevent.Event) {
 				"caller": e.FunctionName,
 				"callee": e.CallerName,
 				"error":  e.Err.Error(),
-			}).Error("OnStop hook failed")
+			}).Error("OnStop钩子执行失败")
 		} else {
 			l.logger.WithFields(logrus.Fields{
 				"caller":  e.FunctionName,
 				"callee":  e.CallerName,
 				"runtime": e.Runtime.String(),
-			}).Info("OnStop hook executed")
+			}).Info("OnStop钩子执行完成")
 		}
 
 	case *fxevent.Supplied:
@@ -67,9 +67,9 @@ func (l *FxLogger) LogEvent(event fxevent.Event) {
 			l.logger.WithFields(logrus.Fields{
 				"type":  e.TypeName,
 				"error": e.Err.Error(),
-			}).Error("Supply failed")
+			}).Error("依赖供应失败")
 		} else {
-			l.logger.WithField("type", e.TypeName).Debug("Supplied")
+			l.logger.WithField("type", e.TypeName).Debug("依赖供应成功")
 		}
 
 	case *fxevent.Provided:
@@ -77,60 +77,60 @@ func (l *FxLogger) LogEvent(event fxevent.Event) {
 			l.logger.WithFields(logrus.Fields{
 				"constructor": e.ConstructorName,
 				"type":        rtype,
-			}).Debug("Provided")
+			}).Debug("依赖注入成功")
 		}
 
 	case *fxevent.Invoking:
-		l.logger.WithField("function", e.FunctionName).Debug("Invoking")
+		l.logger.WithField("function", e.FunctionName).Debug("正在调用函数")
 
 	case *fxevent.Invoked:
 		if e.Err != nil {
 			l.logger.WithFields(logrus.Fields{
 				"function": e.FunctionName,
 				"error":    e.Err.Error(),
-			}).Error("Invoke failed")
+			}).Error("函数调用失败")
 		} else {
 			l.logger.WithFields(logrus.Fields{
 				"function": e.FunctionName,
 				"trace":    e.Trace,
-			}).Debug("Invoked")
+			}).Debug("函数调用完成")
 		}
 
 	case *fxevent.Stopping:
-		l.logger.WithField("signal", e.Signal.String()).Info("Received signal")
+		l.logger.WithField("signal", e.Signal.String()).Info("接收到信号")
 
 	case *fxevent.Stopped:
 		if e.Err != nil {
-			l.logger.WithField("error", e.Err.Error()).Error("Stop failed")
+			l.logger.WithField("error", e.Err.Error()).Error("停止失败")
 		} else {
-			l.logger.Info("Stopped")
+			l.logger.Info("已停止")
 		}
 
 	case *fxevent.RollingBack:
-		l.logger.WithField("error", e.StartErr.Error()).Error("Start failed, rolling back")
+		l.logger.WithField("error", e.StartErr.Error()).Error("启动失败，正在回滚")
 
 	case *fxevent.RolledBack:
 		if e.Err != nil {
-			l.logger.WithField("error", e.Err.Error()).Error("Rollback failed")
+			l.logger.WithField("error", e.Err.Error()).Error("回滚失败")
 		} else {
-			l.logger.Info("Rolled back")
+			l.logger.Info("回滚完成")
 		}
 
 	case *fxevent.Started:
 		if e.Err != nil {
-			l.logger.WithField("error", e.Err.Error()).Error("Start failed")
+			l.logger.WithField("error", e.Err.Error()).Error("启动失败")
 		} else {
-			l.logger.Info("Started")
+			l.logger.Info("启动成功")
 		}
 
 	case *fxevent.LoggerInitialized:
 		if e.Err != nil {
-			l.logger.WithField("error", e.Err.Error()).Error("Logger initialization failed")
+			l.logger.WithField("error", e.Err.Error()).Error("日志器初始化失败")
 		} else {
-			l.logger.WithField("constructor", e.ConstructorName).Debug("Logger initialized")
+			l.logger.WithField("constructor", e.ConstructorName).Debug("日志器初始化成功")
 		}
 
 	default:
-		l.logger.WithField("event", fmt.Sprintf("%T", e)).Debug("Unknown fx event")
+		l.logger.WithField("event", fmt.Sprintf("%T", e)).Debug("未知的fx事件")
 	}
 }

@@ -3,11 +3,15 @@ package boot
 import (
 	"context"
 
+	"github.com/zhoudm1743/go-flow/app/admin"
 	"github.com/zhoudm1743/go-flow/core/cache"
 	"github.com/zhoudm1743/go-flow/core/config"
+	"github.com/zhoudm1743/go-flow/core/cron"
 	"github.com/zhoudm1743/go-flow/core/database"
+	"github.com/zhoudm1743/go-flow/core/event"
 	"github.com/zhoudm1743/go-flow/core/http"
 	"github.com/zhoudm1743/go-flow/core/logger"
+	"github.com/zhoudm1743/go-flow/pkg"
 	"go.uber.org/fx"
 )
 
@@ -15,10 +19,16 @@ var Module = fx.Options(
 	config.Module,
 	logger.Module,
 	database.Module,
-	database.MigratorModule,
 	cache.Module,
+	cron.Module,
+	event.Module,
+	pkg.Module,
 	http.Module,
 
+	// 应用模块
+	admin.Module,
+
+	// 启动
 	fx.Invoke(bootstrap),
 )
 
@@ -34,25 +44,6 @@ func bootstrap(
 
 	lifecycle.Append(fx.Hook{
 		OnStart: func(ctx context.Context) error {
-			log.WithFields(map[string]interface{}{
-				"name":    cfg.App.Name,
-				"version": cfg.App.Version,
-				"env":     cfg.App.Env,
-				"port":    cfg.App.Port,
-			}).Info("应用启动")
-
-			log.WithFields(map[string]interface{}{
-				"host":     cfg.Database.Host,
-				"port":     cfg.Database.Port,
-				"database": cfg.Database.Database,
-			}).Info("数据库配置")
-
-			log.WithFields(map[string]interface{}{
-				"host": cfg.Redis.Host,
-				"port": cfg.Redis.Port,
-				"db":   cfg.Redis.DB,
-			}).Info("Redis配置")
-
 			log.WithField("level", cfg.Log.Level).Info("日志服务已初始化")
 
 			// 测试数据库连接

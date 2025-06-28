@@ -132,3 +132,1163 @@
 [36mINFO   [0m[2025-06-28 01:06:11] Redis 连接已关闭                                  
 [36mINFO   [0m[2025-06-28 01:06:11] 正在停止 HTTP 服务...                              
 [36mINFO   [0m[2025-06-28 01:06:11] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 05:26:38] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 05:26:38] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 05:26:38] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 05:26:38] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 05:26:38] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 05:26:38] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 05:26:39] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 05:26:39] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 05:26:39] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 05:26:39] 应用启动                                          [36menv[0m=development [36mname[0m=go-flow [36mport[0m=8080 [36mversion[0m=1.0.0
+[36mINFO   [0m[2025-06-28 05:26:39] 数据库配置                                         [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306
+[36mINFO   [0m[2025-06-28 05:26:39] Redis配置                                       [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 05:26:39] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 05:26:39] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 05:26:39] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:01:07] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:01:07] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:01:07] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:01:07] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:01:07] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:01:09] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:01:09] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:01:09] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:01:09] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:01:09] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:01:09] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:01:11] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:01:11] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:01:11] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:01:11] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:01:11] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:01:11] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:13:04] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:13:04] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:13:04] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:13:04] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:13:04] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).getUserList-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).getUserByID-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] POST   /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).createUser-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] PUT    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).updateUser-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] DELETE /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).deleteUser-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /admin/system/info        --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).getSystemInfo-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /admin/system/health      --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).getSystemHealth-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] POST   /admin/system/config      --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).updateSystemConfig-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /admin/dashboard/stats    --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).getDashboardStats-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] [GIN-debug] GET    /admin/dashboard/analytics --> github.com/zhoudm1743/go-flow/app/admin/routes.(*AdminRoutes).getAnalytics-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:13:06] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:13:06] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:13:06] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:13:07] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:13:07] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:13:07] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:13:07] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:13:07] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:13:07] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:13:21] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:13:21] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:13:21] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:13:21] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:13:21] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:36:58] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] POST   /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func4 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] PUT    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func5 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] DELETE /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func6 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /admin/system/info        --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func2 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /admin/system/health      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func3 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] POST   /admin/system/config      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func4 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /admin/dashboard/stats    --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] [GIN-debug] GET    /admin/dashboard/analytics --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:36:58] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:36:58] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:36:59] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:36:59] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:36:59] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:36:59] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:36:59] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:36:59] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:37:32] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:37:32] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:37:32] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:37:32] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:37:32] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:38:01] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] POST   /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func4 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] PUT    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func5 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] DELETE /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func6 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /admin/system/info        --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func2 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /admin/system/health      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func3 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] POST   /admin/system/config      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func4 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /admin/dashboard/stats    --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] [GIN-debug] GET    /admin/dashboard/analytics --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:38:01] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:38:01] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:38:02] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:38:02] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:38:02] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:38:02] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:38:02] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:38:02] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:38:17] GET /admin/users 200 0s                       [36mclient_ip[0m=::1 [36mdata_length[0m=167 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/users [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:38:17+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:38:17]                                              
+[36mINFO   [0m[2025-06-28 06:38:34] GET /admin/users 401 0s                       [36mclient_ip[0m=::1 [36mdata_length[0m=40 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/users [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=401 [36mtimestamp[0m=2025-06-28T06:38:34+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:38:34]                                              
+[36mINFO   [0m[2025-06-28 06:38:50] GET /admin/system/info 200 0s                 [36mclient_ip[0m=::1 [36mdata_length[0m=113 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/system/info [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:38:50+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:38:50]                                              
+[36mINFO   [0m[2025-06-28 06:39:02] GET /admin/system/info 403 0s                 [36mclient_ip[0m=::1 [36mdata_length[0m=46 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/system/info [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=403 [36mtimestamp[0m=2025-06-28T06:39:02+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:39:02]                                              
+[36mINFO   [0m[2025-06-28 06:39:14] GET /admin/system/info 403 0s                 [36mclient_ip[0m=::1 [36mdata_length[0m=46 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/system/info [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=403 [36mtimestamp[0m=2025-06-28T06:39:14+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:39:14]                                              
+[36mINFO   [0m[2025-06-28 06:40:49] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] POST   /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func4 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] PUT    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func5 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] DELETE /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func6 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /admin/system/info        --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func2 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /admin/system/health      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func3 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] POST   /admin/system/config      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func4 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /admin/dashboard/stats    --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] [GIN-debug] GET    /admin/dashboard/analytics --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:40:49] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:40:49] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:40:50] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:40:50] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:40:50] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:40:50] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:40:50] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:40:50] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:41:41] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:41:41] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:41:41] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:41:41] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:41:41] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:41:42] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] POST   /admin/users              --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func4 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] PUT    /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func5 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] DELETE /admin/users/:id          --> github.com/zhoudm1743/go-flow/app/admin/routes.regUserRoutes.Reg.regUserRoutes.func1.func6 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/system/info        --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func2 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/system/health      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func3 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] POST   /admin/system/config      --> github.com/zhoudm1743/go-flow/app/admin/routes.regSystemRoutes.Reg.regSystemRoutes.func1.func4 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/dashboard/stats    --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] [GIN-debug] GET    /admin/dashboard/analytics --> github.com/zhoudm1743/go-flow/app/admin/routes.regDashboardRoutes.Reg.regDashboardRoutes.func1.func3 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:41:42] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:41:42] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:41:43] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:41:44] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:41:44] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:41:44] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:41:44] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:41:44] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:43:36] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:43:36] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:43:36] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:43:36] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:43:36] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:43:38] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:43:38] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:43:38] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:43:38] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:43:38] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:43:38] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:43:38] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:43:39] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:43:39] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:43:39] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:43:39] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:43:39] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:43:39] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:46:31] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:46:31] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:46:31] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:46:31] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:46:31] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:46:31] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func4 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:46:31] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func5 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:46:31] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:46:31] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:46:32] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:46:32] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:46:32] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:46:32] 日志服务已初始化                                      [36mfields.level[0m=info
+[31mERROR  [0m[2025-06-28 06:46:32] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 06:46:32] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:46:32] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:46:38] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:46:38] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:46:38] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:46:38] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:46:38] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:47:07] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:47:07] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:47:07] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:47:07] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:47:07] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func2 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:47:07] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func4 (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:47:07] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.regTest.Reg.regTest.func1.func5 (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:47:07] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:47:07] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:47:08] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:47:08] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:47:08] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:47:08] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:47:08] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:47:08] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:49:50] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:49:50] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:49:50] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:49:50] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:49:50] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:50:05] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:50:05] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:50:05] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:50:05] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:50:05] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:50:07] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:50:08] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:08] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:08] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:08] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:08] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:08] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:08] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:50:08] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:50:09] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:50:09] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:50:09] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:50:09] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:50:09] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:50:09] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:50:32] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:50:32] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:50:32] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:50:32] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:50:32] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:50:47] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:50:47] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:47] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:47] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:47] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:47] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:47] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:50:47] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:50:47] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:50:48] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:50:48] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:50:48] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:50:48] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:50:48] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:50:48] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:50:50] GET /admin/test/test 200 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=67 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:50:50+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:50:50]                                              
+[36mINFO   [0m[2025-06-28 06:51:04] GET /admin/test/test-multi 200 0s             [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test-multi [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:51:04+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:51:04]                                              
+[36mINFO   [0m[2025-06-28 06:52:22] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:52:22] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:22] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:22] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:22] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:52:22] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:52:23] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:52:23] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:52:23] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:52:23] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:52:23] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:52:23] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:52:51] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:52:51] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:52:51] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:52:51] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:52:51] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:52:52] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:52:52] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:52] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:52] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:52] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:52] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:52] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:52:52] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:52:52] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:52:53] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:52:53] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:52:53] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:52:53] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:52:53] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:52:53] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:53:22] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:53:22] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:53:22] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:53:22] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:53:22] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:53:24] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:53:24] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:53:24] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:53:24] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:53:24] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:53:24] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (6 handlers) 
+[36mINFO   [0m[2025-06-28 06:53:24] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:53:24] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:53:24] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:53:25] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:53:25] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:53:25] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:53:25] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:53:25] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:53:25] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:53:51] GET /admin/test/test 401 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=40 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=401 [36mtimestamp[0m=2025-06-28T06:53:51+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 06:53:51]                                              
+[36mINFO   [0m[2025-06-28 06:53:51] GET /favicon.ico 404 0s                       [36mclient_ip[0m=::1 [36mdata_length[0m=-1 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/favicon.ico [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=404 [36mtimestamp[0m=2025-06-28T06:53:51+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 06:53:51]                                              
+[36mINFO   [0m[2025-06-28 06:54:10] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:54:10] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:54:10] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:54:10] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:54:10] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:54:11] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:54:11] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:54:11] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:54:11] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:54:11] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:54:11] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:54:11] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:54:11] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:54:11] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:54:12] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:54:12] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:54:12] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:54:12] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:54:12] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:54:12] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:54:17] 
+
+[31m2025/06/28 06:54:17 [Recovery] 2025/06/28 - 06:54:17 panic recovered:
+GET /admin/test/test HTTP/1.1
+Host: localhost:8080
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: zh-CN,zh;q=0.9
+Cache-Control: max-age=0
+Connection: keep-alive
+Cookie: __itrace_wid=1693a901-a944-4d5e-909d-86487550e182
+Sec-Ch-Ua: "Not?A_Brand";v="99", "Chromium";v="130"
+Sec-Ch-Ua-Mobile: ?0
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+
+
+runtime error: invalid memory address or nil pointer dereference
+C:/Program Files/Go/src/runtime/panic.go:262 (0xd13797)
+	panicmem: panic(memoryError)
+C:/Program Files/Go/src/runtime/signal_windows.go:401 (0xd13767)
+	sigpanic: panicmem()
+K:/Git/go-flow/app/admin/routes/test/test.go:47 (0x119473a)
+	(*testRoutes).test: res := r.srv.Test()
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/context.go:185 (0x105d1ca)
+	(*Context).Next: c.handlers[c.index](c)
+K:/Git/go-flow/core/http/middleware.go:36 (0x1194294)
+	NewService.CORSMiddleware.func1: c.Next()
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/context.go:185 (0x106212e)
+	(*Context).Next: c.handlers[c.index](c)
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/recovery.go:102 (0x106211b)
+	CustomRecoveryWithWriter.func1: c.Next()
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/context.go:185 (0x1061264)
+	(*Context).Next: c.handlers[c.index](c)
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/logger.go:249 (0x106124b)
+	LoggerWithConfig.func1: c.Next()
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/context.go:185 (0x10606b1)
+	(*Context).Next: c.handlers[c.index](c)
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/gin.go:644 (0x1060140)
+	(*Engine).handleHTTPRequest: c.Next()
+C:/Users/Administrator/go/pkg/mod/github.com/gin-gonic/gin@v1.10.1/gin.go:600 (0x105fdc9)
+	(*Engine).ServeHTTP: engine.handleHTTPRequest(c)
+C:/Program Files/Go/src/net/http/server.go:3301 (0xf2f2ad)
+	serverHandler.ServeHTTP: handler.ServeHTTP(rw, req)
+C:/Program Files/Go/src/net/http/server.go:2102 (0xf24ec4)
+	(*conn).serve: serverHandler{c.server}.ServeHTTP(w, w.req)
+C:/Program Files/Go/src/runtime/asm_amd64.s:1700 (0xd37980)
+	goexit: BYTE	$0x90	// NOP
+[0m 
+[31mERROR  [0m[2025-06-28 06:54:17] 服务器内部错误，请求处理时发生恐慌                             [31mclient_ip[0m=127.0.0.1 [31mmethod[0m=GET [31mpanic[0m=runtime error: invalid memory address or nil pointer dereference [31mpath[0m=/admin/test/test
+[36mINFO   [0m[2025-06-28 06:54:17] GET /admin/test/test 500 7.6345ms             [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=64 [36mlatency[0m=7.6345ms [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=500 [36mtimestamp[0m=2025-06-28T06:54:17+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 06:54:17]                                              
+[36mINFO   [0m[2025-06-28 06:56:33] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:56:33] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:56:33] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:56:33] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:56:33] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:56:33] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:56:33] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:56:33] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:56:33] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:56:34] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:56:34] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:56:34] HTTP 服务已启动，地址: http://localhost:8080         
+[31mERROR  [0m[2025-06-28 06:56:34] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 06:56:34] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:56:34] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:56:34] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:56:39] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:56:39] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:56:39] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:56:39] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:56:39] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:56:42] 应用停止                                         
+[36mINFO   [0m[2025-06-28 06:56:42] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 06:56:42] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 06:56:42] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 06:56:42] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 06:57:03] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 06:57:03] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:57:03] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:57:03] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:57:03] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:57:03] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 06:57:03] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 06:57:03] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 06:57:03] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 06:57:04] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 06:57:04] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 06:57:04] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 06:57:04] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 06:57:04] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 06:57:04] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 06:57:07] GET /admin/test/test 200 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:57:07+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:57:07]                                              
+[36mINFO   [0m[2025-06-28 06:57:21] GET /admin/test/test-multi 200 0s             [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test-multi [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:57:21+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:57:21]                                              
+[36mINFO   [0m[2025-06-28 06:57:30] GET /admin/test/test-multi 200 0s             [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test-multi [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T06:57:30+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 06:57:30]                                              
+[36mINFO   [0m[2025-06-28 07:01:21] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:01:21] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:21] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:21] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:21] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:21] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:21] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:21] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:01:21] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:01:22] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:01:22] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:01:22] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:01:22] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:01:22] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:01:22] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:01:34] 应用停止                                         
+[36mINFO   [0m[2025-06-28 07:01:34] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 07:01:34] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 07:01:34] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 07:01:34] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 07:01:47] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:01:47] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:47] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:47] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:47] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:47] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:47] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:01:47] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:01:47] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:01:48] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:01:48] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:01:48] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:01:48] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:01:48] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:01:48] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:02:13] 应用停止                                         
+[36mINFO   [0m[2025-06-28 07:02:13] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 07:02:13] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 07:02:13] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 07:02:13] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 07:02:16] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:02:16] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:02:16] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:02:16] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:02:16] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:02:16] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:02:16] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:02:16] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:02:16] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:02:17] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:02:17] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:02:17] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:02:17] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:02:17] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:02:17] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:02:19] GET /admin/test/test 200 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:02:19+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 07:02:19]                                              
+[36mINFO   [0m[2025-06-28 07:07:41] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:07:41] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:07:41] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:07:41] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:07:41] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:07:41] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:07:41] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:07:41] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:07:41] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:07:42] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:07:42] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:07:42] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:07:42] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:07:42] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:07:42] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:07:47] 应用停止                                         
+[36mINFO   [0m[2025-06-28 07:07:47] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 07:07:47] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 07:07:47] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 07:07:47] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 07:08:07] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:08:07] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:07] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:07] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:07] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:07] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:07] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:07] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:08:07] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:08:08] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:08:08] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:08:08] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:08:08] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:08:08] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:08:08] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:08:26] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:08:26] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:26] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:26] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:26] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:26] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:26] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:08:26] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:08:26] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:08:27] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:08:27] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:08:27] HTTP 服务已启动，地址: http://localhost:8080         
+[31mERROR  [0m[2025-06-28 07:08:27] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 07:08:27] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:08:27] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:08:27] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:08:46] GET /admin/test/test 200 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:08:46+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 07:08:46]                                              
+[36mINFO   [0m[2025-06-28 07:09:01] GET /admin/test/test 200 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:09:01+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 07:09:01]                                              
+[36mINFO   [0m[2025-06-28 07:09:17] GET /admin/test/test-multi 200 0s             [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test-multi [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:09:17+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 07:09:17]                                              
+[36mINFO   [0m[2025-06-28 07:09:30] POST /admin/test/test 200 0s                  [36mclient_ip[0m=::1 [36mdata_length[0m=60 [36mlatency[0m=0s [36mmethod[0m=POST [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:09:30+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT; Windows NT 10.0; zh-CN) WindowsPowerShell/5.1.19041.5965
+[36mINFO   [0m[2025-06-28 07:09:30]                                              
+[36mINFO   [0m[2025-06-28 07:16:10] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:16:10] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:16:10] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:16:10] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:16:10] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:16:10] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:16:10] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:16:10] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:16:10] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:16:11] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:16:11] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:16:11] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:16:11] 日志服务已初始化                                      [36mfields.level[0m=info
+[31mERROR  [0m[2025-06-28 07:16:11] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 07:16:11] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:16:11] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:19:38] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:19:38] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:19:38] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:19:38] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:19:38] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:19:38] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:19:38] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:19:38] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:19:38] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:19:39] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:19:39] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:19:39] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:19:39] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:19:39] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:19:39] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:23:48] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:23:48] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:23:48] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:23:48] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:23:48] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:23:48] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:23:48] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:23:48] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:23:48] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:23:49] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:23:49] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:23:49] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:23:49] 日志服务已初始化                                      [36mfields.level[0m=info
+[31mERROR  [0m[2025-06-28 07:23:49] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 07:23:49] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:23:49] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:23:55] 应用停止                                         
+[36mINFO   [0m[2025-06-28 07:23:55] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 07:23:55] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 07:23:55] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 07:23:55] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 07:27:33] 应用停止                                         
+[36mINFO   [0m[2025-06-28 07:27:33] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 07:27:33] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 07:27:33] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 07:27:33] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 07:27:35] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:27:35] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:27:35] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:27:35] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:27:35] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:27:35] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:27:35] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:27:35] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:27:35] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:27:36] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:27:36] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:27:36] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:27:36] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:27:36] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:27:36] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:27:44] GET /admin/test/test 200 0s                   [36mclient_ip[0m=::1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:27:44+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:27:44]                                              
+[36mINFO   [0m[2025-06-28 07:34:19] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:34:19] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:34:19] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:34:19] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:34:19] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:34:19] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:34:19] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:34:19] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:34:19] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:34:20] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:34:20] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:34:20] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:34:20] 日志服务已初始化                                      [36mfields.level[0m=info
+[31mERROR  [0m[2025-06-28 07:34:20] HTTP 服务启动失败: listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted. 
+[36mINFO   [0m[2025-06-28 07:34:20] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:34:20] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:34:25] 应用停止                                         
+[36mINFO   [0m[2025-06-28 07:34:25] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 07:34:25] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 07:34:25] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 07:34:25] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 07:39:10] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 07:39:10] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:39:10] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:39:10] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:39:10] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:39:10] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 07:39:10] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 07:39:10] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 07:39:10] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 07:39:11] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 07:39:11] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 07:39:11] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 07:39:11] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 07:39:11] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 07:39:11] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 07:39:19] GET /admin/test/test 200 3.6885ms             [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=3.6885ms [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:19+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:19]                                              
+[36mINFO   [0m[2025-06-28 07:39:20] GET /admin/test/test 200 0s                   [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:20+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:20]                                              
+[36mINFO   [0m[2025-06-28 07:39:21] GET /admin/test/test 200 1.0005ms             [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=1.0005ms [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:21+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:21]                                              
+[36mINFO   [0m[2025-06-28 07:39:21] GET /admin/test/test 200 0s                   [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:21+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:21]                                              
+[36mINFO   [0m[2025-06-28 07:39:21] GET /admin/test/test 200 0s                   [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:21+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:21]                                              
+[36mINFO   [0m[2025-06-28 07:39:21] GET /admin/test/test 200 0s                   [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:21+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:21]                                              
+[36mINFO   [0m[2025-06-28 07:39:22] GET /admin/test/test 200 0s                   [36mclient_ip[0m=127.0.0.1 [36mdata_length[0m=91 [36mlatency[0m=0s [36mmethod[0m=GET [36mpath[0m=/admin/test/test [36mprotocol[0m=HTTP/1.1 [36mstatus_code[0m=200 [36mtimestamp[0m=2025-06-28T07:39:22+08:00 [36muser_agent[0m=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 QuarkPC/4.1.7.408
+[36mINFO   [0m[2025-06-28 07:39:22]                                              
+[36mINFO   [0m[2025-06-28 08:19:26] 应用停止                                         
+[36mINFO   [0m[2025-06-28 08:19:26] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 08:19:26] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 08:19:26] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 08:19:26] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 08:19:27] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 08:19:27] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:19:27] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:19:27] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:19:27] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:19:27] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 08:19:27] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:19:27] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 08:19:27] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 08:19:28] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 08:19:28] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 08:19:28] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 08:19:28] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 08:19:28] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 08:19:28] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 08:21:04] 应用停止                                         
+[36mINFO   [0m[2025-06-28 08:21:04] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 08:21:04] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 08:21:04] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 08:21:04] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 08:21:06] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 08:21:06] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:21:06] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:21:06] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:21:06] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:21:06] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 08:21:06] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:21:06] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 08:21:06] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 08:21:07] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 08:21:07] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 08:21:07] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 08:21:07] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 08:21:07] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 08:21:07] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 08:37:06] 应用停止                                         
+[36mINFO   [0m[2025-06-28 08:37:06] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 08:37:06] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 08:37:06] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 08:37:06] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 08:38:42] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 08:38:42] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 08:38:42] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 08:38:42] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:38:42] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:38:42] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:38:42] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:38:42] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 08:38:42] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:38:42] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 08:38:43] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 08:38:43] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 08:38:43] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 08:38:43] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 08:38:43] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 08:38:43] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 08:38:43] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 08:38:43] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 08:38:43] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 08:39:05] 应用停止                                         
+[36mINFO   [0m[2025-06-28 08:39:05] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 08:39:05] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 08:39:05] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 08:39:05] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 08:39:05] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 08:39:05] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 08:39:05] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 08:58:55] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 08:58:55] Initializing system event handlers...        
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 user.login <nil>} {handler 15 0 UserEventHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 system.startup <nil>} {handler 15 0 SystemEventHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 data.created <nil>} {handler 15 0 DataEventHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] System event handlers initialized successfully 
+[36mINFO   [0m[2025-06-28 08:58:55] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 08:58:55] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 08:58:55] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:58:55] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:58:55] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:58:55] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:58:55] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 08:58:55] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 08:58:55] Starting event system...                     
+[36mINFO   [0m[2025-06-28 08:58:55] Event bus started                             [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 08:58:55] Delayed event scheduler started{poll_interval 8 30000000000  <nil>} {batch_size 11 50  <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 cron.task.created <nil>} {handler 15 0 CronTaskCreatedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 cron.task.executed <nil>} {handler 15 0 CronTaskExecutedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 cron.task.failed <nil>} {handler 15 0 CronTaskFailedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 08:58:55] Successfully subscribed to event{event_type 15 0 cron.task.completed <nil>} {handler 15 0 CronTaskCompletedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 08:58:55] Cron event integration initialized successfully 
+[36mINFO   [0m[2025-06-28 08:58:55] Event system started successfully            
+[36mINFO   [0m[2025-06-28 08:58:55] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 08:58:56] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 08:58:56] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 08:58:56] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 08:58:56] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 08:58:56] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 08:58:56] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 08:58:56] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 08:58:56] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 08:58:56] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 08:59:34] 应用停止                                         
+[36mINFO   [0m[2025-06-28 08:59:34] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 08:59:34] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 08:59:34] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 08:59:34] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 08:59:34] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 08:59:34] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 08:59:34] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 08:59:34] Stopping event system...                     
+[36mINFO   [0m[2025-06-28 08:59:34] Stopping delayed event scheduler...          
+[36mINFO   [0m[2025-06-28 08:59:34] Delayed event scheduler stopped gracefully   
+[36mINFO   [0m[2025-06-28 08:59:34] Stopping event bus...                        
+[36mINFO   [0m[2025-06-28 08:59:34] Event bus stopped gracefully                 
+[36mINFO   [0m[2025-06-28 08:59:34] Event system stopped                         
+[36mINFO   [0m[2025-06-28 09:10:00] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 09:10:00] Initializing system event handlers...        
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 user.login <nil>} {handler 15 0 UserEventHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 system.startup <nil>} {handler 15 0 SystemEventHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 data.created <nil>} {handler 15 0 DataEventHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] System event handlers initialized successfully 
+[36mINFO   [0m[2025-06-28 09:10:00] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 09:10:00] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 09:10:00] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:10:00] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:10:00] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:10:00] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:10:00] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 09:10:00] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:10:00] Starting event system...                     
+[36mINFO   [0m[2025-06-28 09:10:00] Event bus started                             [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 09:10:00] Delayed event scheduler started{poll_interval 8 30000000000  <nil>} {batch_size 11 50  <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 cron.task.created <nil>} {handler 15 0 CronTaskCreatedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 cron.task.executed <nil>} {handler 15 0 CronTaskExecutedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 cron.task.failed <nil>} {handler 15 0 CronTaskFailedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Event handler subscribed                      [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:10:00] Successfully subscribed to event{event_type 15 0 cron.task.completed <nil>} {handler 15 0 CronTaskCompletedHandler <nil>} 
+[36mINFO   [0m[2025-06-28 09:10:00] Cron event integration initialized successfully 
+[36mINFO   [0m[2025-06-28 09:10:00] Event system started successfully            
+[36mINFO   [0m[2025-06-28 09:10:00] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 09:10:01] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 09:10:01] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 09:10:01] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 09:10:01] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 09:10:01] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 09:10:01] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 09:10:01] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 09:10:01] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 09:10:01] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 09:11:34] 应用停止                                         
+[36mINFO   [0m[2025-06-28 09:11:34] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 09:11:34] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 09:11:34] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 09:11:34] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 09:11:34] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 09:11:34] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 09:11:34] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 09:11:34] Stopping event system...                     
+[36mINFO   [0m[2025-06-28 09:11:34] Stopping delayed event scheduler...          
+[36mINFO   [0m[2025-06-28 09:11:34] Delayed event scheduler stopped gracefully   
+[36mINFO   [0m[2025-06-28 09:11:34] Stopping event bus...                        
+[36mINFO   [0m[2025-06-28 09:11:34] Event bus stopped gracefully                 
+[36mINFO   [0m[2025-06-28 09:11:34] Event system stopped                         
+[36mINFO   [0m[2025-06-28 09:15:05] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 09:15:05] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 09:15:05] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 09:15:05] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 09:15:05] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:15:05] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:15:05] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:15:05] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:15:05] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 09:15:05] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:15:05] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:15:05] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 09:15:05] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:15:05] Cron event integration initialized successfully 
+[36mINFO   [0m[2025-06-28 09:15:05] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 09:15:05] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 09:15:06] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 09:15:06] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 09:15:06] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 09:15:06] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 09:15:06] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 09:15:06] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 09:15:06] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 09:15:06] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 09:15:06] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 09:15:13] 应用停止                                         
+[36mINFO   [0m[2025-06-28 09:15:13] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 09:15:13] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 09:15:13] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 09:15:13] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 09:15:13] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 09:15:13] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 09:15:13] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 09:15:13] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:15:13] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 09:15:13] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 09:15:13] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 09:15:13] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 09:15:13] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 09:17:21] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 09:17:21] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 09:17:21] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 09:17:21] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 09:17:21] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:17:21] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:17:21] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:17:21] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:17:21] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 09:17:21] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:17:21] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:17:21] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 09:17:21] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:17:21] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 09:17:21] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 09:17:21] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 09:17:22] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 09:17:22] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 09:17:22] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 09:17:22] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 09:17:22] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 09:17:22] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 09:17:22] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 09:17:22] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 09:17:22] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 09:17:29] 应用停止                                         
+[36mINFO   [0m[2025-06-28 09:17:29] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 09:17:29] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 09:17:29] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 09:17:29] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 09:17:29] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 09:17:29] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 09:17:29] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 09:17:29] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:17:29] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 09:17:29] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 09:17:29] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 09:17:29] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 09:17:29] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 09:26:53] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 09:26:53] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 09:26:53] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:26:53] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:26:53] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:26:53] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:26:53] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:26:53] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:26:53] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 09:26:53] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 09:26:54] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 09:26:54] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:26:54] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:26:54] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:26:54] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:26:54] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 09:26:54] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:26:54] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:26:54] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 09:26:54] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 09:26:54] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:26:54] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 09:26:54] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 09:26:54] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 09:26:54] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 09:26:54] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 09:26:54] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 09:26:54] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 09:26:54] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 09:26:54] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 09:26:54] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 09:26:55] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 09:26:55] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 09:27:02] 应用停止                                         
+[36mINFO   [0m[2025-06-28 09:27:02] 数据库连接已关闭                                     
+[36mINFO   [0m[2025-06-28 09:27:02] Redis 连接已关闭                                  
+[36mINFO   [0m[2025-06-28 09:27:02] 正在停止 HTTP 服务...                              
+[36mINFO   [0m[2025-06-28 09:27:02] HTTP 服务已停止                                   
+[36mINFO   [0m[2025-06-28 09:27:02] 所有任务执行完成                                     
+[36mINFO   [0m[2025-06-28 09:27:02] Cron调度器停止成功                                  
+[36mINFO   [0m[2025-06-28 09:27:02] Cron模块停止成功                                   
+[36mINFO   [0m[2025-06-28 09:27:02] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:27:02] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 09:27:02] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 09:27:02] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 09:27:02] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 09:27:02] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 09:27:04] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 09:27:04] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 09:27:04] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 09:27:04] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 09:27:04] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:27:04] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:27:04] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:27:04] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:27:04] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 09:27:04] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 09:27:04] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 09:27:04] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 09:27:04] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 09:27:04] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 09:27:04] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 09:27:04] 开始数据库自动迁移                                     [36mmodels[0m=1
+[36mINFO   [0m[2025-06-28 09:27:05] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 09:27:05] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 09:27:05] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 09:27:05] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 09:27:05] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 09:27:05] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 09:27:05] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 09:27:05] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 09:27:05] Redis 连接测试成功                                 
+[36mINFO   [0m[2025-06-28 10:06:39] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 10:06:39] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 10:06:39] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 10:06:39] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 10:06:39] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:06:39] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:06:39] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:06:39] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:06:39] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 10:06:39] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:06:39] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 10:06:39] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 10:06:39] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 10:06:39] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 10:06:39] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 10:06:39] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 10:06:39] [35mK:/Git/go-flow/core/database/gorm.go:53
+[0m[31m[error] [0mfailed to parse value &models.SystemAdmin{BaseModel:models.BaseModel{ID:0x0, CreatedAt:0, UpdatedAt:0}, Username:"", Password:"", Status:0, Role:[]uint(nil), Email:"", Phone:types.Phone{BaseSensitive:types.BaseSensitive{value:"", encrypted:false}}, Avatar:"", LastLoginAt:0, LastLoginIP:""}, got error failed to parse field: Role, error: unsupported data type: &[] 
+[36mINFO   [0m[2025-06-28 10:06:39] [35mK:/Git/go-flow/core/database/gorm.go:53
+[0m[31m[error] [0mfailed to parse value &models.SystemAdmin{BaseModel:models.BaseModel{ID:0x0, CreatedAt:0, UpdatedAt:0}, Username:"", Password:"", Status:0, Role:[]uint(nil), Email:"", Phone:types.Phone{BaseSensitive:types.BaseSensitive{value:"", encrypted:false}}, Avatar:"", LastLoginAt:0, LastLoginIP:""}, got error failed to parse field: Role, error: unsupported data type: &[] 
+[31mERROR  [0m[2025-06-28 10:06:39] 数据库迁移失败                                       [31merror[0m=failed to parse field: Role, error: unsupported data type: &[]
+[36mINFO   [0m[2025-06-28 10:06:39] 正在停止事件系统...                                  
+[36mINFO   [0m[2025-06-28 10:06:39] 正在停止延时事件调度器...                               
+[36mINFO   [0m[2025-06-28 10:06:39] 延时事件调度器优雅停止完成                                
+[36mINFO   [0m[2025-06-28 10:06:39] 正在停止事件总线...                                  
+[36mINFO   [0m[2025-06-28 10:06:39] 事件总线优雅停止完成                                   
+[36mINFO   [0m[2025-06-28 10:06:39] 事件系统已停止                                      
+[36mINFO   [0m[2025-06-28 10:22:42] Redis 连接成功                                    [36mdb[0m=0 [36mhost[0m=localhost [36mport[0m=6379
+[36mINFO   [0m[2025-06-28 10:22:42] 正在初始化系统事件处理器...                              
+[36mINFO   [0m[2025-06-28 10:22:42] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 10:22:42] 成功订阅事件                                        [36mevent_type[0m=user.login [36mhandler[0m=UserEventHandler
+[36mINFO   [0m[2025-06-28 10:22:42] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 10:22:42] 成功订阅事件                                        [36mevent_type[0m=system.startup [36mhandler[0m=SystemEventHandler
+[36mINFO   [0m[2025-06-28 10:22:42] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 10:22:42] 成功订阅事件                                        [36mevent_type[0m=data.created [36mhandler[0m=DataEventHandler
+[36mINFO   [0m[2025-06-28 10:22:42] 系统事件处理器初始化成功                                 
+[36mINFO   [0m[2025-06-28 10:22:43] 数据库连接成功                                       [36mdatabase[0m=go_flow [36mhost[0m=localhost [36mport[0m=3306 [36musername[0m=root
+[36mINFO   [0m[2025-06-28 10:22:43] 已注册内置系统任务处理器map[handlers:[log cache_clean db_maintenance]] 
+[36mINFO   [0m[2025-06-28 10:22:43] [GIN-debug] GET    /health                   --> github.com/zhoudm1743/go-flow/core/http.(*Service).healthCheck-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:22:43] [GIN-debug] GET    /ping                     --> github.com/zhoudm1743/go-flow/core/http.(*Service).ping-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:22:43] [GIN-debug] GET    /api/v1/status            --> github.com/zhoudm1743/go-flow/core/http.(*Service).getStatus-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:22:43] [GIN-debug] GET    /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).test-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:22:43] [GIN-debug] GET    /admin/test/test-multi    --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testMulti-fm (5 handlers) 
+[36mINFO   [0m[2025-06-28 10:22:43] [GIN-debug] POST   /admin/test/test          --> github.com/zhoudm1743/go-flow/app/admin/routes/test.(*testRoutes).testPost-fm (4 handlers) 
+[36mINFO   [0m[2025-06-28 10:22:43] 正在启动事件系统...                                  
+[36mINFO   [0m[2025-06-28 10:22:43] 事件总线启动成功                                      [36mbuffer_size[0m=1000 [36mworker_count[0m=10
+[36mINFO   [0m[2025-06-28 10:22:43] 延时事件调度器启动成功                                   [36mbatch_size[0m=50 [36mpoll_interval[0m=30s
+[36mINFO   [0m[2025-06-28 10:22:43] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 成功订阅事件                                        [36mevent_type[0m=cron.task.created [36mhandler[0m=CronTaskCreatedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 成功订阅事件                                        [36mevent_type[0m=cron.task.executed [36mhandler[0m=CronTaskExecutedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 成功订阅事件                                        [36mevent_type[0m=cron.task.failed [36mhandler[0m=CronTaskFailedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 事件处理器订阅成功                                     [36masync[0m=true [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] 成功订阅事件                                        [36mevent_type[0m=cron.task.completed [36mhandler[0m=CronTaskCompletedHandler
+[36mINFO   [0m[2025-06-28 10:22:43] Cron事件集成初始化成功                                
+[36mINFO   [0m[2025-06-28 10:22:43] 事件系统启动成功                                     
+[36mINFO   [0m[2025-06-28 10:22:43] 开始数据库自动迁移                                     [36mmodels[0m=2
+[36mINFO   [0m[2025-06-28 10:22:43] 数据库迁移完成                                      
+[36mINFO   [0m[2025-06-28 10:22:43] 现有任务加载完成                                      [36mcount[0m=0
+[36mINFO   [0m[2025-06-28 10:22:43] Cron调度器启动成功                                  
+[36mINFO   [0m[2025-06-28 10:22:43] Cron模块启动成功                                   
+[36mINFO   [0m[2025-06-28 10:22:43] HTTP 服务正在启动，监听端口: 8080                       
+[36mINFO   [0m[2025-06-28 10:22:43] HTTP 服务已启动，地址: http://localhost:8080         
+[36mINFO   [0m[2025-06-28 10:22:43] 日志服务已初始化                                      [36mfields.level[0m=info
+[36mINFO   [0m[2025-06-28 10:22:43] 数据库连接测试成功                                    
+[36mINFO   [0m[2025-06-28 10:22:43] Redis 连接测试成功                                 

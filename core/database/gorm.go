@@ -6,7 +6,6 @@ import (
 
 	"github.com/zhoudm1743/go-flow/core/config"
 	"github.com/zhoudm1743/go-flow/core/logger"
-	"go.uber.org/fx"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	gormLogger "gorm.io/gorm/logger"
@@ -53,11 +52,6 @@ func (d *GormDatabase) Ping() error {
 func (d *GormDatabase) AutoMigrate(dst ...interface{}) error {
 	return d.db.AutoMigrate(dst...)
 }
-
-// Module fx模块
-var Module = fx.Options(
-	fx.Provide(NewDatabase),
-)
 
 // NewDatabase 创建新的数据库实例
 func NewDatabase(cfg *config.Config, log logger.Logger) (Database, error) {

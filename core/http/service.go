@@ -11,16 +11,22 @@ import (
 	"github.com/zhoudm1743/go-flow/core/logger"
 )
 
+// RouteRegistrator 路由注册器接口
+type RouteRegistrator interface {
+	RegisterRoutes(engine *gin.Engine) error
+}
+
 // Service HTTP 服务
 type Service struct {
-	server *http.Server
-	engine *gin.Engine
-	config *config.Config
-	logger logger.Logger
+	server       *http.Server
+	engine       *gin.Engine
+	config       *config.Config
+	logger       logger.Logger
+	registrators []RouteRegistrator // 路由注册器列表
 }
 
 // NewService 创建新的 HTTP 服务实例
-func NewService(cfg *config.Config, log logger.Logger) *Service {
+func NewService(cfg *config.Config, log logger.Logger, registrators []RouteRegistrator) *Service {
 	// 根据环境设置 Gin 模式
 	switch cfg.App.Env {
 	case "production":
@@ -57,11 +63,15 @@ func NewService(cfg *config.Config, log logger.Logger) *Service {
 	}
 
 	service := &Service{
-		server: server,
-		engine: engine,
-		config: cfg,
-		logger: log,
+		server:       server,
+		engine:       engine,
+		config:       cfg,
+		logger:       log,
+		registrators: registrators,
 	}
+
+	// 初始化全局路由注册器
+	InitGlobalRegistrar(engine)
 
 	// 注册路由
 	service.registerRoutes()
@@ -82,6 +92,13 @@ func (s *Service) registerRoutes() {
 		{
 			// 示例路由
 			v1.GET("/status", s.getStatus)
+		}
+	}
+
+	// 注册所有模块的路由
+	for _, registrator := range s.registrators {
+		if err := registrator.RegisterRoutes(s.engine); err != nil {
+			s.logger.Errorf("路由注册失败: %v", err)
 		}
 	}
 }
