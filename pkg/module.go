@@ -4,6 +4,7 @@ import (
 	"go.uber.org/fx"
 
 	"github.com/zhoudm1743/go-flow/pkg/captcha"
+	"github.com/zhoudm1743/go-flow/pkg/jwt"
 	"github.com/zhoudm1743/go-flow/pkg/types"
 	"github.com/zhoudm1743/go-flow/pkg/validate"
 )
@@ -18,4 +19,7 @@ var Module = fx.Options(
 
 	// 验证码模块
 	captcha.Module,
+
+	// JWT模块
+	jwt.Module,
 )

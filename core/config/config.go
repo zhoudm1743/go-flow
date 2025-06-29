@@ -15,6 +15,7 @@ type Config struct {
 	Database DatabaseConfig `mapstructure:"database"`
 	Redis    RedisConfig    `mapstructure:"redis"`
 	Log      LogConfig      `mapstructure:"log"`
+	Jwt      JwtConfig      `mapstructure:"jwt"`
 }
 
 // AppConfig 应用配置
@@ -66,6 +67,14 @@ type LumberjackConfig struct {
 	MaxAge     int    `mapstructure:"maxage"`     // 日志文件保留天数
 	MaxBackups int    `mapstructure:"maxbackups"` // 最多保留多少个备份文件
 	Compress   bool   `mapstructure:"compress"`   // 是否压缩旧日志文件
+}
+
+// JwtConfig JWT配置
+type JwtConfig struct {
+	Secret         string `mapstructure:"secret"`          // JWT 签名密钥
+	ExpiresIn      string `mapstructure:"expires_in"`      // 访问token过期时间（小时）
+	RefreshExpires string `mapstructure:"refresh_expires"` // 刷新token过期时间（小时）
+	Issuer         string `mapstructure:"issuer"`          // 签发者
 }
 
 // Module fx模块
@@ -152,6 +161,12 @@ log:
     maxage: 7
     maxbackups: 3
     compress: true
+
+jwt:
+  secret: "your-secret-key-change-in-production"
+  expires_in: 24
+  refresh_expires: 168
+  issuer: "go-flow"
 `
 
 	// 确保配置目录存在

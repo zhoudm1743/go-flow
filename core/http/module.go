@@ -19,6 +19,14 @@ var Module = fx.Options(
 	fx.Provide(func(cfg *config.Config, log logger.Logger, params RouteRegistratorParams) *Service {
 		return NewService(cfg, log, params.Registrators)
 	}),
+	// 提供swagger路由注册器
+	fx.Provide(
+		fx.Annotate(
+			NewSwaggerRegistrator,
+			fx.As(new(RouteRegistrator)),
+			fx.ResultTags(`group:"route_registrators"`),
+		),
+	),
 	fx.Invoke(registerLifecycle),
 )
 

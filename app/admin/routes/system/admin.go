@@ -2,24 +2,27 @@ package system
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/zhoudm1743/go-flow/app/admin/middleware"
 	"github.com/zhoudm1743/go-flow/app/admin/schemas/req"
 	"github.com/zhoudm1743/go-flow/app/admin/service/system"
 	httpCore "github.com/zhoudm1743/go-flow/core/http"
+	"github.com/zhoudm1743/go-flow/pkg/jwt"
 	"github.com/zhoudm1743/go-flow/pkg/response"
 	"github.com/zhoudm1743/go-flow/pkg/util"
 )
 
 type adminRoutes struct {
 	srv system.AdminService
+	jwt jwt.JwtService
 }
 
-func NewAdminGroup(srv system.AdminService) httpCore.Group {
+func NewAdminGroup(srv system.AdminService, jwt jwt.JwtService) httpCore.Group {
 	return httpCore.NewGroup("/system",
 		func() interface{} {
-			return &adminRoutes{srv: srv}
+			return &adminRoutes{srv: srv, jwt: jwt}
 		},
 		regAdmin,
-		httpCore.AuthMiddleware,
+		middleware.AuthMiddleware(jwt),
 	)
 }
 
@@ -79,7 +82,7 @@ func (r *adminRoutes) list(c *gin.Context) {
 // @Accept json
 // @Produce json
 // @Header 200 {string} Authorization "{token}"
-// @Param idReq body req.SystemAdminDetailReq true "管理员ID"
+// @Param idReq body req.IdReq true "管理员ID"
 // @Success 200 {object} response.Response{data=resp.SystemAdminResp} "成功"
 // @Router /system/admin/detail [get]
 func (r *adminRoutes) detail(c *gin.Context) {

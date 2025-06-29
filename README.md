@@ -547,6 +547,182 @@ var Module = fx.Options(
 3. 在 `boot/bootstrap.go` 中集成新模块
 4. 在配置文件中添加相应配置
 
+## 🎯 Casbin权限系统集成
+
+### 概述
+本项目已集成Casbin RBAC权限认证系统，提供完善的权限管理功能。
+
+### 功能特性
+- ✅ RBAC角色权限模型
+- ✅ 用户角色分配管理
+- ✅ 权限策略动态配置
+- ✅ API权限中间件
+- ✅ 数据库持久化存储
+- ✅ 批量权限操作
+- ✅ 默认权限策略初始化
+
+### 权限模型
+使用RBAC模型，支持：
+- 用户(User) -> 角色(Role) -> 权限(Permission)
+- 路径匹配权限控制（支持通配符）
+- 角色继承机制
+
+### API接口
+
+#### 权限管理接口（需要admin角色）
+```
+POST   /api/admin/permissions/users/:userID/roles      # 为用户分配角色
+DELETE /api/admin/permissions/users/:userID/roles/:role # 移除用户角色
+GET    /api/admin/permissions/users/:userID/roles      # 获取用户角色
+
+POST   /api/admin/permissions/policies                 # 添加权限策略
+DELETE /api/admin/permissions/policies                 # 删除权限策略
+GET    /api/admin/permissions/policies/:subject        # 获取主体权限
+
+POST   /api/admin/permissions/roles                    # 创建角色
+DELETE /api/admin/permissions/roles/:role              # 删除角色
+GET    /api/admin/permissions/roles                    # 获取所有角色
+
+POST   /api/admin/permissions/check                    # 检查权限
+```
+
+#### 受保护接口示例
+```
+GET    /api/admin/protected/profile                    # 获取用户信息
+PUT    /api/admin/protected/profile                    # 更新用户信息
+```
+
+### 使用示例
+
+#### 1. 分配用户角色
+```bash
+curl -X POST http://localhost:8080/api/admin/permissions/users/user123/roles \
+  -H "Content-Type: application/json" \
+  -H "X-User-ID: admin" \
+  -d '{"role": "admin"}'
+```
+
+#### 2. 添加权限策略
+```bash
+curl -X POST http://localhost:8080/api/admin/permissions/policies \
+  -H "Content-Type: application/json" \
+  -H "X-User-ID: admin" \
+  -d '{
+    "subject": "user",
+    "object": "/api/user/*",
+    "action": "GET"
+  }'
+```
+
+#### 3. 检查权限
+```bash
+curl -X POST http://localhost:8080/api/admin/permissions/check \
+  -H "Content-Type: application/json" \
+  -H "X-User-ID: admin" \
+  -d '{
+    "user_id": "user123",
+    "resource": "/api/user/profile",
+    "action": "GET"
+  }'
+```
+
+#### 4. 访问受保护的API
+```bash
+curl -X GET http://localhost:8080/api/admin/protected/profile \
+  -H "X-User-ID: user123"
+```
+
+### 默认角色和权限
+
+#### 角色类型
+- `admin`: 管理员，拥有所有权限
+- `user`: 普通用户，拥有基础功能权限
+- `guest`: 访客，只有公开接口权限
+
+#### 默认权限策略
+```
+# 管理员权限
+admin -> /api/* -> GET,POST,PUT,DELETE
+admin -> /system/* -> GET,POST,PUT,DELETE
+
+# 用户权限
+user -> /api/user/* -> GET,POST,PUT
+user -> /api/profile/* -> GET,PUT
+
+# 访客权限
+guest -> /api/public/* -> GET
+guest -> /api/login -> POST
+guest -> /api/register -> POST
+```
+
+### 中间件使用
+
+#### 权限验证中间件
+```go
+// 使用Casbin权限验证
+router.Use(http.CasbinAuthMiddleware(casbinService))
+
+// 要求特定角色
+router.Use(http.RequireRole("admin", casbinService))
+```
+
+### 配置说明
+
+#### RBAC模型配置 (`config/rbac_model.conf`)
+```conf
+[request_definition]
+r = sub, obj, act
+
+[policy_definition]  
+p = sub, obj, act
+
+[role_definition]
+g = _, _
+
+[policy_effect]
+e = some(where (p.eft == allow))
+
+[matchers]
+m = g(r.sub, p.sub) && keyMatch2(r.obj, p.obj) && r.act == p.act
+```
+
+### 开发指南
+
+#### 在代码中使用
+```go
+// 注入CasbinService
+func NewYourController(casbinService *casbin.CasbinService) *YourController {
+    return &YourController{
+        casbinService: casbinService,
+    }
+}
+
+// 检查权限
+func (c *YourController) SomeHandler(ctx *gin.Context) {
+    userID := ctx.GetString("user_id")
+    
+    if !c.casbinService.CheckPermission(userID, "/api/resource", "GET") {
+        ctx.JSON(403, gin.H{"error": "权限不足"})
+        return
+    }
+    
+    // 继续处理...
+}
+```
+
+### 数据库表
+权限数据存储在`casbin_rule`表中，包含以下字段：
+- `ptype`: 策略类型 (p/g)
+- `v0`: 主体 (用户/角色)
+- `v1`: 对象 (资源路径)
+- `v2`: 动作 (HTTP方法)
+
+### 注意事项
+1. 权限检查时使用`X-User-ID`请求头传递用户ID
+2. 生产环境中应从JWT token中解析用户信息
+3. 权限策略支持通配符匹配（使用`keyMatch2`）
+4. 所有权限变更会自动持久化到数据库
+
 ## �� 许可证
 
 MIT License 

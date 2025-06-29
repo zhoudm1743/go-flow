@@ -1,18 +1,23 @@
-# Common
-dist
+.vite-ssg-temp
+
 node_modules
-.eslintcache
-vite.config.*.timestamp*
-
-# MacOS
 .DS_Store
-
-# Local env files
+dist
+dist-ssr
 *.local
 
-# Logs
-*.log
-
-# Use the pnpm
-package-lock.json
+# lock
 yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+*.log
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

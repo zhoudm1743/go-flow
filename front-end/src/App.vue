@@ -1,32 +1,39 @@
-<script lang="ts" setup>
-import { useGreyAndColorWeakness } from "@@/composables/useGreyAndColorWeakness"
-import { usePany } from "@@/composables/usePany"
-import { useTheme } from "@@/composables/useTheme"
-import zhCn from "element-plus/es/locale/lang/zh-cn" // Element Plus 中文包
-
-const { initTheme } = useTheme()
-
-const { initGreyAndColorWeakness } = useGreyAndColorWeakness()
-
-const { initStarNotification, initStoreNotification, initMobileNotification } = usePany()
-
-// 初始化主题
-initTheme()
-
-// 初始化灰色模式和色弱模式
-initGreyAndColorWeakness()
-
-// #region 初始化通知
-initStarNotification()
-
-initStoreNotification()
-
-initMobileNotification()
-// #endregion
-</script>
-
 <template>
-  <el-config-provider :locale="zhCn">
-    <router-view />
+  <el-config-provider >
+    <el-watermark :font="font" content="openflow" style="height: 100vh;">
+    <router-view></router-view>
+    </el-watermark>
   </el-config-provider>
+  <!-- <DflowSign></DflowSign> -->
 </template>
+
+<script setup>
+import { watch, reactive } from "vue";
+import DflowSign from './views/dflow-design/index.vue'
+import { toggleDark,isDark } from "~/composables/index.js";
+const font = reactive({
+  color: 'rgba(0, 0, 0, .15)',
+})
+watch(
+  isDark,
+  () => {
+    font.color = isDark.value
+      ? 'rgba(255, 255, 255, .15)'
+      : 'rgba(0, 0, 0, .15)'
+  },
+  {
+    immediate: true,
+  }
+)
+</script>
+<style  scoped>
+#app {
+  /* text-align: center; */
+  /* background-color: var(--el-bg-color-page); */
+  overflow: hidden;
+ 
+  /* color: var(--el-text-color-primary); */
+}
+
+
+</style>

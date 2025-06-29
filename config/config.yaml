@@ -32,3 +32,9 @@ log:
     maxage: 30
     maxbackups: 5
     compress: true 
+
+jwt:
+  secret: "zhoudm1743wBqzkwGulYSmBSMzH7mMsE"
+  expires_in: "24h"
+  refresh_expires: "168h"
+  issuer: "go-flow"
