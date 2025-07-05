@@ -526,11 +526,11 @@ package main
 import (
     "os"
     
-    "github.com/yourusername/go-flow/cmd"
-    "github.com/yourusername/go-flow/internal/demo"
-    "github.com/yourusername/go-flow/internal/product" // 导入新模块
-    "github.com/yourusername/go-flow/pkg/core"
-    "github.com/yourusername/go-flow/pkg/http"
+    "github.com/zhoudm1743/go-flow/cmd"
+    "github.com/zhoudm1743/go-flow/internal/demo"
+    "github.com/zhoudm1743/go-flow/internal/product" // 导入新模块
+    "github.com/zhoudm1743/go-flow/pkg/core"
+    "github.com/zhoudm1743/go-flow/pkg/http"
 )
 
 func main() {
@@ -689,8 +689,8 @@ package middleware
 import (
     "time"
     
-    "github.com/yourusername/go-flow/pkg/http/unified"
-    "github.com/yourusername/go-flow/pkg/log"
+    "github.com/zhoudm1743/go-flow/pkg/http/unified"
+    "github.com/zhoudm1743/go-flow/pkg/log"
 )
 
 // NewTimerMiddleware 创建请求计时中间件
@@ -717,7 +717,7 @@ func NewTimerMiddleware(logger log.Logger) unified.MiddlewareFunc {
 // 在 main.go 中注册全局中间件
 import (
     // 其他导入...
-    "github.com/yourusername/go-flow/pkg/http/middleware"
+    "github.com/zhoudm1743/go-flow/pkg/http/middleware"
 )
 
 func main() {
@@ -3169,8 +3169,8 @@ import (
 
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/mock"
-    "github.com/yourusername/go-flow/internal/product/model"
-    "github.com/yourusername/go-flow/internal/product/service"
+    "github.com/zhoudm1743/go-flow/internal/product/model"
+    "github.com/zhoudm1743/go-flow/internal/product/service"
 )
 
 // MockRepository 是一个仓库的模拟实现
@@ -3238,7 +3238,7 @@ import (
 
     "github.com/gin-gonic/gin"
     "github.com/stretchr/testify/assert"
-    "github.com/yourusername/go-flow/pkg/response"
+    "github.com/zhoudm1743/go-flow/pkg/response"
 )
 
 // setupTestRouter 设置测试路由
@@ -3319,9 +3319,9 @@ import (
     "testing"
     
     "github.com/stretchr/testify/assert"
-    "github.com/yourusername/go-flow/internal/product/model"
-    "github.com/yourusername/go-flow/internal/product/repository"
-    "github.com/yourusername/go-flow/internal/product/service"
+    "github.com/zhoudm1743/go-flow/internal/product/model"
+    "github.com/zhoudm1743/go-flow/internal/product/repository"
+    "github.com/zhoudm1743/go-flow/internal/product/service"
     "gorm.io/driver/sqlite"
     "gorm.io/gorm"
 )
@@ -3715,8 +3715,8 @@ jobs:
     
     - name: Push Docker image
       run: |
-        docker tag go-flow:latest yourusername/go-flow:latest
-        docker push yourusername/go-flow:latest
+        docker tag go-flow:latest zhoudm1743/go-flow:latest
+        docker push zhoudm1743/go-flow:latest
   
   deploy:
     needs: build
