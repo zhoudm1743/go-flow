@@ -1,40 +1,31 @@
 app:
-  name: "go-flow"
-  version: "1.0.0"
+  name: go-flow-demo
+  version: 0.1.0
+  mode: dev
+
+http:
+  host: 0.0.0.0
   port: 8080
-  env: "development"
-  http:
-    read_timeout: 30
-    write_timeout: 30
-    idle_timeout: 120
-    enable_cors: true
+  read_timeout: 10s
+  write_timeout: 10s
+  max_header_bytes: 1048576
 
 database:
-  host: "localhost"
-  port: 3306
-  username: "root"
-  password: "123456"
-  database: "go_flow"
+  driver: mysql
+  dsn: root:123456@tcp(localhost:3306)/go_flow?charset=utf8mb4&parseTime=True&loc=Local
+  max_open_conns: 100
+  max_idle_conns: 10
+  conn_max_lifetime: 3600s
+  log_level: error
+
+log:
+  level: debug
+  format: text
+  output_path: stdout 
 
 redis:
-  host: "localhost"
+  host: localhost
   port: 6379
   password: ""
   db: 0
-
-log:
-  level: "info"
-  format: "text"
-  output: "both"
-  lumberjack:
-    filename: "logs/app.log"
-    maxsize: 100
-    maxage: 30
-    maxbackups: 5
-    compress: true 
-
-jwt:
-  secret: "zhoudm1743wBqzkwGulYSmBSMzH7mMsE"
-  expires_in: "24h"
-  refresh_expires: "168h"
-  issuer: "go-flow"
+  prefix: "goflow:" 

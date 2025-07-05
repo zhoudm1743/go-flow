@@ -2,6 +2,7 @@ package validate
 
 import (
 	"regexp"
+	"time"
 
 	"github.com/go-playground/validator/v10"
 )
@@ -18,6 +19,14 @@ func RegisterCustomValidations(v *validator.Validate) {
 	v.RegisterValidation("strong_password", validateStrongPassword)
 	// 字段相等
 	v.RegisterValidation("eqfield", validateEqField)
+	// 中文验证
+	v.RegisterValidation("chinese", validateChinese)
+	// 日期格式验证
+	v.RegisterValidation("date", validateDate)
+	// URL验证
+	v.RegisterValidation("url", validateURL)
+	// 邮政编码验证
+	v.RegisterValidation("zipcode", validateZipCode)
 }
 
 // 验证中国手机号
@@ -49,8 +58,8 @@ func validateChineseName(fl validator.FieldLevel) bool {
 		return false
 	}
 	// 中文姓名正则（2-4个中文字符）
-	nameRegex := regexp.MustCompile(`^[\u4e00-\u9fa5]{2,4}$`)
-	return nameRegex.MatchString(name)
+	// 使用原始字符串避免Unicode转义问题
+	return regexp.MustCompile(`^[\p{Han}]{2,4}$`).MatchString(name)
 }
 
 // 验证强密码（至少8位，包含大小写字母、数字和特殊字符）
@@ -78,4 +87,50 @@ func validateEqField(fl validator.FieldLevel) bool {
 	otherFieldName := fl.Param()
 	otherField := fl.Parent().FieldByName(otherFieldName)
 	return field.String() == otherField.String()
+}
+
+// 验证中文字符
+func validateChinese(fl validator.FieldLevel) bool {
+	str := fl.Field().String()
+	if str == "" {
+		return true
+	}
+	// 中文字符正则
+	return regexp.MustCompile(`^[\p{Han}]+$`).MatchString(str)
+}
+
+// 验证日期格式 (YYYY-MM-DD)
+func validateDate(fl validator.FieldLevel) bool {
+	dateStr := fl.Field().String()
+	if dateStr == "" {
+		return true
+	}
+
+	// 尝试解析日期
+	_, err := time.Parse("2006-01-02", dateStr)
+	return err == nil
+}
+
+// 验证URL格式
+func validateURL(fl validator.FieldLevel) bool {
+	url := fl.Field().String()
+	if url == "" {
+		return true
+	}
+
+	// URL正则表达式
+	urlRegex := regexp.MustCompile(`^(http|https)://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}(?:/[a-zA-Z0-9\-\._~:/?#[\]@!$&'()*+,;=]*)?$`)
+	return urlRegex.MatchString(url)
+}
+
+// 验证中国邮政编码
+func validateZipCode(fl validator.FieldLevel) bool {
+	zipCode := fl.Field().String()
+	if zipCode == "" {
+		return true
+	}
+
+	// 中国邮政编码为6位数字
+	zipCodeRegex := regexp.MustCompile(`^\d{6}$`)
+	return zipCodeRegex.MatchString(zipCode)
 }

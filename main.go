@@ -1,50 +1,36 @@
-// Package main Go-Flow API服务
-// @title Go-Flow API
-// @version 1.0
-// @description 这是一个基于Go和Gin的企业级后台管理系统API
-// @termsOfService http://swagger.io/terms/
-//
-// @contact.name API Support
-// @contact.url http://www.swagger.io/support
-// @contact.email support@swagger.io
-//
-// @license.name MIT
-// @license.url https://opensource.org/licenses/MIT
-//
-// @host localhost:8080
-// @BasePath /api/v1
-//
-// @securityDefinitions.apikey ApiKeyAuth
-// @in header
-// @name Authorization
-// @description Bearer token for authentication
 package main
 
 import (
-	"github.com/sirupsen/logrus"
-	"github.com/zhoudm1743/go-flow/boot"
-	"github.com/zhoudm1743/go-flow/core/logger"
+	"os"
 
-	_ "github.com/zhoudm1743/go-flow/docs" // swagger docs
-	"go.uber.org/fx"
-	"go.uber.org/fx/fxevent"
+	"github.com/zhoudm1743/go-flow/cmd"
+	"github.com/zhoudm1743/go-flow/internal/demo"
+	"github.com/zhoudm1743/go-flow/internal/shop"
+	"github.com/zhoudm1743/go-flow/internal/test"
+	"github.com/zhoudm1743/go-flow/internal/user"
+	"github.com/zhoudm1743/go-flow/pkg/core"
+	"github.com/zhoudm1743/go-flow/pkg/http"
 )
 
 func main() {
-	fx.New(
-		fx.WithLogger(func() fxevent.Logger {
-			fxLogger := logrus.New()
-			fxLogger.SetLevel(logrus.InfoLevel)
-			fxLogger.SetFormatter(&logrus.TextFormatter{
-				FullTimestamp:   true,
-				TimestampFormat: "2006-01-02 15:04:05",
-				ForceColors:     true,
-				DisableColors:   false,
-				PadLevelText:    true,
-				DisableQuote:    true,
-			})
-			return logger.NewFxLogger(fxLogger)
-		}),
-		boot.Module,
-	).Run()
+	// 检查是否是命令行模式
+	if len(os.Args) > 1 && os.Args[1] == "gen" {
+		cmd.Execute()
+		return
+	}
+
+	// 创建应用
+	app := core.NewApp("go-flow")
+
+	// 添加HTTP模块
+	app.WithOptions(http.UnifiedModule)
+
+	// 添加模块
+	app.AddModule(demo.NewModuleWithName("demo")) // 使用/demo前缀
+	app.AddModule(user.NewModuleWithName("v1"))   // 使用/v1前缀注册user模块
+	app.AddModule(test.NewModule())               // 添加新生成的test模块
+	app.AddModule(shop.NewModule())               // 添加新生成的shop模块
+
+	// 启动应用
+	app.Run()
 }

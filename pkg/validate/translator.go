@@ -6,11 +6,12 @@ import (
 	ut "github.com/go-playground/universal-translator"
 	"github.com/go-playground/validator/v10"
 	zhtranslations "github.com/go-playground/validator/v10/translations/zh"
+	"github.com/zhoudm1743/go-flow/pkg/facades"
 )
 
 var (
-	Validator *validator.Validate
-	Trans     ut.Translator
+	// Trans 全局翻译器
+	Trans ut.Translator
 )
 
 // InitValidator 初始化验证器和中文翻译
@@ -35,6 +36,13 @@ func InitValidator() error {
 
 		// 注册自定义验证规则的中文翻译
 		registerCustomTranslations()
+
+		// 设置门面实例
+		facades.SetValidator(v)
+		facades.SetTranslator(Trans)
+
+		// 记录初始化成功日志
+		facades.Log.Infof("验证器初始化成功")
 	}
 
 	return nil
@@ -71,6 +79,38 @@ func registerCustomTranslations() {
 		return ut.Add("strong_password", "{0}必须至少8位，包含大小写字母、数字和特殊字符", true)
 	}, func(ut ut.Translator, fe validator.FieldError) string {
 		t, _ := ut.T("strong_password", fe.Field())
+		return t
+	})
+
+	// 中文字符验证翻译
+	Validator.RegisterTranslation("chinese", Trans, func(ut ut.Translator) error {
+		return ut.Add("chinese", "{0}必须是中文字符", true)
+	}, func(ut ut.Translator, fe validator.FieldError) string {
+		t, _ := ut.T("chinese", fe.Field())
+		return t
+	})
+
+	// 日期格式验证翻译
+	Validator.RegisterTranslation("date", Trans, func(ut ut.Translator) error {
+		return ut.Add("date", "{0}必须是有效的日期格式(YYYY-MM-DD)", true)
+	}, func(ut ut.Translator, fe validator.FieldError) string {
+		t, _ := ut.T("date", fe.Field())
+		return t
+	})
+
+	// URL格式验证翻译
+	Validator.RegisterTranslation("url", Trans, func(ut ut.Translator) error {
+		return ut.Add("url", "{0}必须是有效的URL地址", true)
+	}, func(ut ut.Translator, fe validator.FieldError) string {
+		t, _ := ut.T("url", fe.Field())
+		return t
+	})
+
+	// 邮政编码验证翻译
+	Validator.RegisterTranslation("zipcode", Trans, func(ut ut.Translator) error {
+		return ut.Add("zipcode", "{0}必须是有效的6位邮政编码", true)
+	}, func(ut ut.Translator, fe validator.FieldError) string {
+		t, _ := ut.T("zipcode", fe.Field())
 		return t
 	})
 }
