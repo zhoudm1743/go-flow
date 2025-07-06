@@ -11,8 +11,8 @@ http:
   max_header_bytes: 1048576
 
 database:
-  driver: mysql
-  dsn: root:123456@tcp(localhost:3306)/go_flow?charset=utf8mb4&parseTime=True&loc=Local
+  driver: sqlite
+  dsn: ./go-flow.db
   max_open_conns: 100
   max_idle_conns: 10
   conn_max_lifetime: 3600s
@@ -23,9 +23,11 @@ log:
   format: text
   output_path: stdout 
 
-redis:
-  host: localhost
-  port: 6379
-  password: ""
-  db: 0
-  prefix: "goflow:" 
+cache:
+  type: memory     # 缓存类型: memory、redis 或 file
+  host: localhost  # redis 主机地址，仅当 type 为 redis 时使用
+  port: 6379       # redis 端口，仅当 type 为 redis 时使用
+  password: ""     # redis 密码，仅当 type 为 redis 时使用
+  db: 0            # redis 数据库，仅当 type 为 redis 时使用
+  prefix: "goflow:" # 缓存键前缀
+  file_path: "./storage/cache" # 文件缓存路径，仅当 type 为 file 时使用 

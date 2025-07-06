@@ -11,111 +11,6 @@ import (
 	"go.uber.org/fx"
 )
 
-// Cache 缓存接口
-type Cache interface {
-	// 默认方法（不带 Context，使用 unified.Background()）
-	// 基础操作
-	Get(key string) (string, error)
-	Set(key string, value interface{}, expiration time.Duration) error
-	Del(keys ...string) (int64, error)
-	Exists(keys ...string) (int64, error)
-	Expire(key string, expiration time.Duration) error
-	TTL(key string) (time.Duration, error)
-
-	// 字符串操作
-	Incr(key string) (int64, error)
-	Decr(key string) (int64, error)
-	IncrBy(key string, value int64) (int64, error)
-
-	// 哈希操作
-	HGet(key, field string) (string, error)
-	HSet(key string, values ...interface{}) (int64, error)
-	HDel(key string, fields ...string) (int64, error)
-	HGetAll(key string) (map[string]string, error)
-	HExists(key, field string) (bool, error)
-	HLen(key string) (int64, error)
-
-	// 列表操作
-	LPush(key string, values ...interface{}) (int64, error)
-	RPush(key string, values ...interface{}) (int64, error)
-	LPop(key string) (string, error)
-	RPop(key string) (string, error)
-	LLen(key string) (int64, error)
-	LRange(key string, start, stop int64) ([]string, error)
-
-	// 集合操作
-	SAdd(key string, members ...interface{}) (int64, error)
-	SRem(key string, members ...interface{}) (int64, error)
-	SMembers(key string) ([]string, error)
-	SIsMember(key string, member interface{}) (bool, error)
-	SCard(key string) (int64, error)
-
-	// 有序集合操作
-	ZAdd(key string, members ...redis.Z) (int64, error)
-	ZRem(key string, members ...interface{}) (int64, error)
-	ZRange(key string, start, stop int64) ([]string, error)
-	ZRangeWithScores(key string, start, stop int64) ([]redis.Z, error)
-	ZCard(key string) (int64, error)
-	ZScore(key, member string) (float64, error)
-
-	// 其他操作
-	Keys(pattern string) ([]string, error)
-	Ping() error
-
-	// 带 Context 的方法（精细控制）
-	// 基础操作
-	GetCtx(ctx context.Context, key string) (string, error)
-	SetCtx(ctx context.Context, key string, value interface{}, expiration time.Duration) error
-	DelCtx(ctx context.Context, keys ...string) (int64, error)
-	ExistsCtx(ctx context.Context, keys ...string) (int64, error)
-	ExpireCtx(ctx context.Context, key string, expiration time.Duration) error
-	TTLCtx(ctx context.Context, key string) (time.Duration, error)
-
-	// 字符串操作
-	IncrCtx(ctx context.Context, key string) (int64, error)
-	DecrCtx(ctx context.Context, key string) (int64, error)
-	IncrByCtx(ctx context.Context, key string, value int64) (int64, error)
-
-	// 哈希操作
-	HGetCtx(ctx context.Context, key, field string) (string, error)
-	HSetCtx(ctx context.Context, key string, values ...interface{}) (int64, error)
-	HDelCtx(ctx context.Context, key string, fields ...string) (int64, error)
-	HGetAllCtx(ctx context.Context, key string) (map[string]string, error)
-	HExistsCtx(ctx context.Context, key, field string) (bool, error)
-	HLenCtx(ctx context.Context, key string) (int64, error)
-
-	// 列表操作
-	LPushCtx(ctx context.Context, key string, values ...interface{}) (int64, error)
-	RPushCtx(ctx context.Context, key string, values ...interface{}) (int64, error)
-	LPopCtx(ctx context.Context, key string) (string, error)
-	RPopCtx(ctx context.Context, key string) (string, error)
-	LLenCtx(ctx context.Context, key string) (int64, error)
-	LRangeCtx(ctx context.Context, key string, start, stop int64) ([]string, error)
-
-	// 集合操作
-	SAddCtx(ctx context.Context, key string, members ...interface{}) (int64, error)
-	SRemCtx(ctx context.Context, key string, members ...interface{}) (int64, error)
-	SMembersCtx(ctx context.Context, key string) ([]string, error)
-	SIsMemberCtx(ctx context.Context, key string, member interface{}) (bool, error)
-	SCardCtx(ctx context.Context, key string) (int64, error)
-
-	// 有序集合操作
-	ZAddCtx(ctx context.Context, key string, members ...redis.Z) (int64, error)
-	ZRemCtx(ctx context.Context, key string, members ...interface{}) (int64, error)
-	ZRangeCtx(ctx context.Context, key string, start, stop int64) ([]string, error)
-	ZRangeWithScoresCtx(ctx context.Context, key string, start, stop int64) ([]redis.Z, error)
-	ZCardCtx(ctx context.Context, key string) (int64, error)
-	ZScoreCtx(ctx context.Context, key, member string) (float64, error)
-
-	// 其他操作
-	KeysCtx(ctx context.Context, pattern string) ([]string, error)
-	PingCtx(ctx context.Context) error
-
-	// 工具方法
-	Close() error
-	GetClient() *redis.Client
-}
-
 // RedisCache Redis 缓存实现
 type RedisCache struct {
 	client *redis.Client
@@ -132,9 +27,9 @@ var RedisModule = fx.Options(
 func NewRedisCache(cfg *config.Config, log log.Logger) (Cache, error) {
 	// 创建 Redis 客户端
 	rdb := redis.NewClient(&redis.Options{
-		Addr:     fmt.Sprintf("%s:%d", cfg.Redis.Host, cfg.Redis.Port),
-		Password: cfg.Redis.Password,
-		DB:       cfg.Redis.DB,
+		Addr:     fmt.Sprintf("%s:%d", cfg.Cache.Host, cfg.Cache.Port),
+		Password: cfg.Cache.Password,
+		DB:       cfg.Cache.DB,
 	})
 
 	// 测试连接
@@ -146,16 +41,16 @@ func NewRedisCache(cfg *config.Config, log log.Logger) (Cache, error) {
 	}
 
 	log.WithFields(map[string]interface{}{
-		"host":   cfg.Redis.Host,
-		"port":   cfg.Redis.Port,
-		"db":     cfg.Redis.DB,
-		"prefix": cfg.Redis.Prefix,
+		"host":   cfg.Cache.Host,
+		"port":   cfg.Cache.Port,
+		"db":     cfg.Cache.DB,
+		"prefix": cfg.Cache.Prefix,
 	}).Info("Redis 连接成功")
 
 	return &RedisCache{
 		client: rdb,
 		logger: log,
-		prefix: cfg.Redis.Prefix,
+		prefix: cfg.Cache.Prefix,
 	}, nil
 }
 
@@ -168,7 +63,7 @@ func (r *RedisCache) buildKey(key string) string {
 }
 
 // GetClient 获取原始 Redis 客户端
-func (r *RedisCache) GetClient() *redis.Client {
+func (r *RedisCache) GetClient() interface{} {
 	return r.client
 }
 
@@ -299,8 +194,17 @@ func (r *RedisCache) SCard(key string) (int64, error) {
 }
 
 // 有序集合操作
-func (r *RedisCache) ZAdd(key string, members ...redis.Z) (int64, error) {
-	return r.client.ZAdd(context.Background(), r.buildKey(key), members...).Result()
+func (r *RedisCache) ZAdd(key string, members ...Z) (int64, error) {
+	// 转换为redis.Z
+	redisMembers := make([]redis.Z, len(members))
+	for i, m := range members {
+		redisMembers[i] = redis.Z{
+			Score:  m.Score,
+			Member: m.Member,
+		}
+	}
+
+	return r.client.ZAdd(context.Background(), r.buildKey(key), redisMembers...).Result()
 }
 
 func (r *RedisCache) ZRem(key string, members ...interface{}) (int64, error) {
@@ -311,8 +215,22 @@ func (r *RedisCache) ZRange(key string, start, stop int64) ([]string, error) {
 	return r.client.ZRange(context.Background(), r.buildKey(key), start, stop).Result()
 }
 
-func (r *RedisCache) ZRangeWithScores(key string, start, stop int64) ([]redis.Z, error) {
-	return r.client.ZRangeWithScores(context.Background(), r.buildKey(key), start, stop).Result()
+func (r *RedisCache) ZRangeWithScores(key string, start, stop int64) ([]Z, error) {
+	result, err := r.client.ZRangeWithScores(context.Background(), r.buildKey(key), start, stop).Result()
+	if err != nil {
+		return nil, err
+	}
+
+	// 转换为我们自定义的Z结构体
+	members := make([]Z, len(result))
+	for i, m := range result {
+		members[i] = Z{
+			Score:  m.Score,
+			Member: m.Member,
+		}
+	}
+
+	return members, nil
 }
 
 func (r *RedisCache) ZCard(key string) (int64, error) {
@@ -468,28 +386,51 @@ func (r *RedisCache) SCardCtx(ctx context.Context, key string) (int64, error) {
 }
 
 // 有序集合操作
-func (r *RedisCache) ZAddCtx(ctx context.Context, key string, members ...redis.Z) (int64, error) {
-	return r.client.ZAdd(ctx, key, members...).Result()
+func (r *RedisCache) ZAddCtx(ctx context.Context, key string, members ...Z) (int64, error) {
+	// 转换为redis.Z
+	redisMembers := make([]redis.Z, len(members))
+	for i, m := range members {
+		redisMembers[i] = redis.Z{
+			Score:  m.Score,
+			Member: m.Member,
+		}
+	}
+
+	return r.client.ZAdd(ctx, r.buildKey(key), redisMembers...).Result()
 }
 
 func (r *RedisCache) ZRemCtx(ctx context.Context, key string, members ...interface{}) (int64, error) {
-	return r.client.ZRem(ctx, key, members...).Result()
+	return r.client.ZRem(ctx, r.buildKey(key), members...).Result()
 }
 
 func (r *RedisCache) ZRangeCtx(ctx context.Context, key string, start, stop int64) ([]string, error) {
-	return r.client.ZRange(ctx, key, start, stop).Result()
+	return r.client.ZRange(ctx, r.buildKey(key), start, stop).Result()
 }
 
-func (r *RedisCache) ZRangeWithScoresCtx(ctx context.Context, key string, start, stop int64) ([]redis.Z, error) {
-	return r.client.ZRangeWithScores(ctx, key, start, stop).Result()
+func (r *RedisCache) ZRangeWithScoresCtx(ctx context.Context, key string, start, stop int64) ([]Z, error) {
+	result, err := r.client.ZRangeWithScores(ctx, r.buildKey(key), start, stop).Result()
+	if err != nil {
+		return nil, err
+	}
+
+	// 转换为我们自定义的Z结构体
+	members := make([]Z, len(result))
+	for i, m := range result {
+		members[i] = Z{
+			Score:  m.Score,
+			Member: m.Member,
+		}
+	}
+
+	return members, nil
 }
 
 func (r *RedisCache) ZCardCtx(ctx context.Context, key string) (int64, error) {
-	return r.client.ZCard(ctx, key).Result()
+	return r.client.ZCard(ctx, r.buildKey(key)).Result()
 }
 
 func (r *RedisCache) ZScoreCtx(ctx context.Context, key, member string) (float64, error) {
-	return r.client.ZScore(ctx, key, member).Result()
+	return r.client.ZScore(ctx, r.buildKey(key), member).Result()
 }
 
 // 其他操作

@@ -3,6 +3,7 @@ package database
 import (
 	"context"
 	"fmt"
+	"os"
 	"time"
 
 	"github.com/glebarez/sqlite" // 纯Go的SQLite实现，不需要CGO
@@ -33,6 +34,11 @@ func NewDB(p DBParams) (*gorm.DB, error) {
 	case "postgres":
 		dialector = postgres.Open(p.Config.Database.DSN)
 	case "sqlite":
+		// 判断文件是否存在
+		if _, err := os.Stat(p.Config.Database.DSN); os.IsNotExist(err) {
+			// 创建文件
+			os.Create(p.Config.Database.DSN)
+		}
 		dialector = sqlite.Open(p.Config.Database.DSN)
 	case "memory":
 		// 使用内存SQLite，不需要CGO

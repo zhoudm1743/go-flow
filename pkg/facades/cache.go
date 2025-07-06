@@ -3,8 +3,6 @@ package facades
 import (
 	"context"
 	"time"
-
-	"github.com/redis/go-redis/v9"
 )
 
 // ================== CacheFacade 方法 ==================
@@ -70,7 +68,7 @@ func (f *CacheFacade) Keys(pattern string) ([]string, error) {
 }
 
 // Client 获取原始Redis客户端
-func (f *CacheFacade) Client() *redis.Client {
+func (f *CacheFacade) Client() interface{} {
 	return GetCache().GetClient()
 }
 

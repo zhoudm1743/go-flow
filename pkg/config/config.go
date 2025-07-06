@@ -3,6 +3,7 @@ package config
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/spf13/viper"
@@ -11,11 +12,11 @@ import (
 
 // Config 配置结构体
 type Config struct {
-	App      AppConfig
-	HTTP     HTTPConfig
-	Database DatabaseConfig
-	Log      LogConfig
-	Redis    RedisConfig
+	App      AppConfig      `mapstructure:"app"`
+	HTTP     HTTPConfig     `mapstructure:"http"`
+	Database DatabaseConfig `mapstructure:"database"`
+	Log      LogConfig      `mapstructure:"log"`
+	Cache    CacheConfig    `mapstructure:"cache"`
 }
 
 // AppConfig 应用配置
@@ -53,13 +54,15 @@ type LogConfig struct {
 	OutputPath string
 }
 
-// RedisConfig Redis缓存配置
-type RedisConfig struct {
+// CacheConfig Cache缓存配置
+type CacheConfig struct {
+	Type     string // 缓存类型：memory、redis 或 file
 	Host     string
 	Port     int
 	Password string
 	DB       int
 	Prefix   string // 键前缀
+	FilePath string // 文件缓存路径，仅当 Type 为 file 时使用
 }
 
 // NewConfig 创建配置
@@ -168,18 +171,26 @@ func setDefaultConfig(config *Config) {
 		config.Database.LogLevel = "error"
 	}
 
-	// Redis默认配置
-	if config.Redis.Host == "" {
-		config.Redis.Host = "localhost"
+	// Cache默认配置
+	if config.Cache.Type == "" {
+		config.Cache.Type = "memory" // 默认使用内存缓存
 	}
-	if config.Redis.Port == 0 {
-		config.Redis.Port = 6379
+	if config.Cache.Host == "" {
+		config.Cache.Host = "localhost"
 	}
-	if config.Redis.DB < 0 {
-		config.Redis.DB = 0
+	if config.Cache.Port == 0 {
+		config.Cache.Port = 6379
 	}
-	if config.Redis.Prefix == "" {
-		config.Redis.Prefix = "goflow:"
+	if config.Cache.DB < 0 {
+		config.Cache.DB = 0
+	}
+	if config.Cache.Prefix == "" {
+		config.Cache.Prefix = "goflow:"
+	}
+	if config.Cache.FilePath == "" {
+		// 默认使用当前工作目录下的 storage/cache 目录
+		cwd, _ := os.Getwd()
+		config.Cache.FilePath = filepath.Join(cwd, "storage", "cache")
 	}
 }
 

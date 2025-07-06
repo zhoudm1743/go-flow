@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/redis/go-redis/v9"
 	"github.com/zhoudm1743/go-flow/pkg/log"
 )
 
@@ -174,8 +173,23 @@ func (h *CacheHelper) LockCtx(ctx context.Context, key string, expiration time.D
 	fullKey := fmt.Sprintf("lock:%s", h.buildKey(key))
 
 	// 使用 SET NX EX 实现分布式锁
-	result := h.cache.GetClient().SetNX(ctx, fullKey, "locked", expiration)
-	return result.Result()
+	// 检查键是否存在
+	exists, err := h.cache.ExistsCtx(ctx, fullKey)
+	if err != nil {
+		return false, err
+	}
+
+	if exists > 0 {
+		return false, nil
+	}
+
+	// 设置锁
+	err = h.cache.SetCtx(ctx, fullKey, "locked", expiration)
+	if err != nil {
+		return false, err
+	}
+
+	return true, nil
 }
 
 // UnlockCtx 释放分布式锁
@@ -222,22 +236,10 @@ func (h *CacheHelper) BatchGetCtx(ctx context.Context, keys []string) (map[strin
 		fullKeys[i] = h.buildKey(key)
 	}
 
-	// 使用 pipeline 批量获取
-	pipe := h.cache.GetClient().Pipeline()
-	cmds := make([]*redis.StringCmd, len(fullKeys))
-	for i, key := range fullKeys {
-		cmds[i] = pipe.Get(ctx, key)
-	}
-
-	_, err := pipe.Exec(ctx)
-	if err != nil && err.Error() != "redis: nil" {
-		return nil, err
-	}
-
-	// 构建结果
+	// 批量获取
 	result := make(map[string]string)
-	for i, cmd := range cmds {
-		val, err := cmd.Result()
+	for i, fullKey := range fullKeys {
+		val, err := h.cache.GetCtx(ctx, fullKey)
 		if err == nil {
 			result[keys[i]] = val
 		}
@@ -252,18 +254,20 @@ func (h *CacheHelper) BatchSetCtx(ctx context.Context, data map[string]interface
 		return nil
 	}
 
-	// 使用 pipeline 批量设置
-	pipe := h.cache.GetClient().Pipeline()
+	// 批量设置
 	for key, value := range data {
-		pipe.Set(ctx, h.buildKey(key), value, expiration)
+		fullKey := h.buildKey(key)
+		if err := h.cache.SetCtx(ctx, fullKey, value, expiration); err != nil {
+			return err
+		}
 	}
 
-	_, err := pipe.Exec(ctx)
-	return err
+	return nil
 }
 
 // FlushByPatternCtx 根据模式删除键
 func (h *CacheHelper) FlushByPatternCtx(ctx context.Context, pattern string) (int64, error) {
+	// 先获取匹配的键
 	fullPattern := h.buildKey(pattern)
 	keys, err := h.cache.KeysCtx(ctx, fullPattern)
 	if err != nil {
@@ -274,6 +278,7 @@ func (h *CacheHelper) FlushByPatternCtx(ctx context.Context, pattern string) (in
 		return 0, nil
 	}
 
+	// 删除匹配的键
 	return h.cache.DelCtx(ctx, keys...)
 }
 
@@ -287,10 +292,17 @@ func (h *CacheHelper) GetOrSetCtx(ctx context.Context, key string, defaultValue 
 		return val, nil
 	}
 
-	// 不存在则设置默认值
-	if err := h.cache.SetCtx(ctx, fullKey, defaultValue, expiration); err != nil {
+	// 键不存在，设置默认值
+	if err != ErrKeyNotFound {
 		return "", err
 	}
 
-	return fmt.Sprintf("%v", defaultValue), nil
+	// 设置默认值
+	strValue := fmt.Sprintf("%v", defaultValue)
+	err = h.cache.SetCtx(ctx, fullKey, strValue, expiration)
+	if err != nil {
+		return "", err
+	}
+
+	return strValue, nil
 }

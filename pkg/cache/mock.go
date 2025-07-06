@@ -8,15 +8,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/redis/go-redis/v9"
 	"github.com/zhoudm1743/go-flow/pkg/config"
 	"github.com/zhoudm1743/go-flow/pkg/log"
 	"go.uber.org/fx"
-)
-
-// 错误定义
-var (
-	ErrKeyNotFound = errors.New("键不存在")
 )
 
 // MockCache 内存缓存实现，用于测试
@@ -35,7 +29,7 @@ func NewMockCache(cfg *config.Config, log log.Logger) (Cache, error) {
 	return &MockCache{
 		data:   make(map[string]interface{}),
 		expiry: make(map[string]time.Time),
-		prefix: cfg.Redis.Prefix,
+		prefix: cfg.Cache.Prefix,
 		logger: log,
 	}, nil
 }
@@ -65,7 +59,7 @@ func (m *MockCache) cleanExpired(key string) {
 }
 
 // GetClient 获取Redis客户端（模拟版本返回nil）
-func (m *MockCache) GetClient() *redis.Client {
+func (m *MockCache) GetClient() interface{} {
 	return nil
 }
 
@@ -124,7 +118,7 @@ func (m *MockCache) GetCtx(ctx context.Context, key string) (string, error) {
 		return "", errors.New("值类型不是字符串")
 	}
 
-	return "", ErrKeyNotFound
+	return "", errors.New("键不存在")
 }
 
 // SetCtx 设置缓存
@@ -186,7 +180,7 @@ func (m *MockCache) ExpireCtx(ctx context.Context, key string, expiration time.D
 
 	fullKey := m.buildKey(key)
 	if _, ok := m.data[fullKey]; !ok {
-		return ErrKeyNotFound
+		return errors.New("键不存在")
 	}
 
 	if expiration > 0 {
@@ -327,12 +321,12 @@ func (m *MockCache) HGetCtx(ctx context.Context, key, field string) (string, err
 			if value, exists := hash[field]; exists {
 				return value, nil
 			}
-			return "", ErrKeyNotFound
+			return "", errors.New("键不存在")
 		}
 		return "", errors.New("值类型不是哈希")
 	}
 
-	return "", ErrKeyNotFound
+	return "", errors.New("键不存在")
 }
 
 // HSetCtx 设置哈希字段
@@ -614,7 +608,7 @@ func (m *MockCache) LPopCtx(ctx context.Context, key string) (string, error) {
 	if val, ok := m.data[fullKey]; ok {
 		if list, ok := val.([]string); ok {
 			if len(list) == 0 {
-				return "", ErrKeyNotFound
+				return "", errors.New("键不存在")
 			}
 
 			result := list[0]
@@ -624,7 +618,7 @@ func (m *MockCache) LPopCtx(ctx context.Context, key string) (string, error) {
 		return "", errors.New("值类型不是列表")
 	}
 
-	return "", ErrKeyNotFound
+	return "", errors.New("键不存在")
 }
 
 // RPop 从列表尾部弹出元素
@@ -643,7 +637,7 @@ func (m *MockCache) RPopCtx(ctx context.Context, key string) (string, error) {
 	if val, ok := m.data[fullKey]; ok {
 		if list, ok := val.([]string); ok {
 			if len(list) == 0 {
-				return "", ErrKeyNotFound
+				return "", errors.New("键不存在")
 			}
 
 			lastIndex := len(list) - 1
@@ -654,7 +648,7 @@ func (m *MockCache) RPopCtx(ctx context.Context, key string) (string, error) {
 		return "", errors.New("值类型不是列表")
 	}
 
-	return "", ErrKeyNotFound
+	return "", errors.New("键不存在")
 }
 
 // 简单实现其他必要方法，返回空值或错误
@@ -678,28 +672,34 @@ func (m *MockCache) SCard(key string) (int64, error) {
 	return 0, errors.New("未实现")
 }
 
-func (m *MockCache) ZAdd(key string, members ...redis.Z) (int64, error) {
-	return 0, errors.New("未实现")
+// ZAdd 添加有序集合成员
+func (m *MockCache) ZAdd(key string, members ...Z) (int64, error) {
+	return 0, nil
 }
 
+// ZRem 删除有序集合成员
 func (m *MockCache) ZRem(key string, members ...interface{}) (int64, error) {
-	return 0, errors.New("未实现")
+	return 0, nil
 }
 
+// ZRange 获取有序集合范围
 func (m *MockCache) ZRange(key string, start, stop int64) ([]string, error) {
-	return nil, errors.New("未实现")
+	return nil, nil
 }
 
-func (m *MockCache) ZRangeWithScores(key string, start, stop int64) ([]redis.Z, error) {
-	return nil, errors.New("未实现")
+// ZRangeWithScores 获取有序集合范围及分数
+func (m *MockCache) ZRangeWithScores(key string, start, stop int64) ([]Z, error) {
+	return nil, nil
 }
 
+// ZCard 获取有序集合成员数
 func (m *MockCache) ZCard(key string) (int64, error) {
-	return 0, errors.New("未实现")
+	return 0, nil
 }
 
+// ZScore 获取有序集合成员分数
 func (m *MockCache) ZScore(key, member string) (float64, error) {
-	return 0, errors.New("未实现")
+	return 0, nil
 }
 
 func (m *MockCache) Keys(pattern string) ([]string, error) {
@@ -750,28 +750,34 @@ func (m *MockCache) SCardCtx(ctx context.Context, key string) (int64, error) {
 	return 0, errors.New("未实现")
 }
 
-func (m *MockCache) ZAddCtx(ctx context.Context, key string, members ...redis.Z) (int64, error) {
-	return 0, errors.New("未实现")
+// ZAddCtx 添加有序集合成员
+func (m *MockCache) ZAddCtx(ctx context.Context, key string, members ...Z) (int64, error) {
+	return 0, nil
 }
 
+// ZRemCtx 删除有序集合成员
 func (m *MockCache) ZRemCtx(ctx context.Context, key string, members ...interface{}) (int64, error) {
-	return 0, errors.New("未实现")
+	return 0, nil
 }
 
+// ZRangeCtx 获取有序集合范围
 func (m *MockCache) ZRangeCtx(ctx context.Context, key string, start, stop int64) ([]string, error) {
-	return nil, errors.New("未实现")
+	return nil, nil
 }
 
-func (m *MockCache) ZRangeWithScoresCtx(ctx context.Context, key string, start, stop int64) ([]redis.Z, error) {
-	return nil, errors.New("未实现")
+// ZRangeWithScoresCtx 获取有序集合范围及分数
+func (m *MockCache) ZRangeWithScoresCtx(ctx context.Context, key string, start, stop int64) ([]Z, error) {
+	return nil, nil
 }
 
+// ZCardCtx 获取有序集合成员数
 func (m *MockCache) ZCardCtx(ctx context.Context, key string) (int64, error) {
-	return 0, errors.New("未实现")
+	return 0, nil
 }
 
+// ZScoreCtx 获取有序集合成员分数
 func (m *MockCache) ZScoreCtx(ctx context.Context, key, member string) (float64, error) {
-	return 0, errors.New("未实现")
+	return 0, nil
 }
 
 // MockCacheModule 提供内存缓存模块
