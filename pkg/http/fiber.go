@@ -8,8 +8,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/gofiber/fiber/v2/middleware/recover"
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.uber.org/fx"
 )
 

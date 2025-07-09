@@ -3,7 +3,7 @@ package facades
 import (
 	"time"
 
-	"github.com/zhoudm1743/go-flow/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/config"
 )
 
 // GetString 获取字符串配置

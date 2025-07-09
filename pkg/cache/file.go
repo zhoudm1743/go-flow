@@ -19,8 +19,8 @@ import (
 	"regexp"
 	"sort"
 
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.etcd.io/bbolt"
 	"go.uber.org/fx"
 )

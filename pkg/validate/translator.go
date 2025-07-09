@@ -6,7 +6,7 @@ import (
 	ut "github.com/go-playground/universal-translator"
 	"github.com/go-playground/validator/v10"
 	zhtranslations "github.com/go-playground/validator/v10/translations/zh"
-	"github.com/zhoudm1743/go-flow/pkg/facades"
+	"github.com/zhoudm1743/go-frame/pkg/facades"
 )
 
 var (

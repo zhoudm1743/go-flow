@@ -40,11 +40,11 @@ func init() {
 var controllerTmpl = `package controller
 
 import (
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/schemas/req"
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/service"
-	"github.com/zhoudm1743/go-flow/pkg/http/unified"
-	"github.com/zhoudm1743/go-flow/pkg/response"
-	"github.com/zhoudm1743/go-flow/util"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/schemas/req"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/service"
+	"github.com/zhoudm1743/go-frame/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/response"
+	"github.com/zhoudm1743/go-frame/util"
 )
 
 // {{.Name}}Controller {{.Comment}}控制器
@@ -151,7 +151,7 @@ func (c *{{.Name}}Controller) Page(ctx unified.Context) error {
 var routerTmpl = `package controller
 
 import (
-	"github.com/zhoudm1743/go-flow/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/http/unified"
 )
 
 // {{.Name}}Router {{.Comment}}路由
@@ -183,10 +183,10 @@ func (r *{{.Name}}Router) RegisterRoutes(router unified.Router) {
 var serviceTmpl = `package service
 
 import (
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/model"
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/repository"
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/schemas/req"
-	"github.com/zhoudm1743/go-flow/pkg/response"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/model"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/repository"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/schemas/req"
+	"github.com/zhoudm1743/go-frame/pkg/response"
 )
 
 // {{.Name}}Service {{.Comment}}服务
@@ -258,9 +258,9 @@ func (s *{{.Name}}Service) GetPage(req *req.PageReq) (*response.PageResult[*mode
 var repositoryTmpl = `package repository
 
 import (
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/model"
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/schemas/req"
-	"github.com/zhoudm1743/go-flow/pkg/response"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/model"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/schemas/req"
+	"github.com/zhoudm1743/go-frame/pkg/response"
 	"gorm.io/gorm"
 )
 
@@ -339,7 +339,7 @@ func (r *{{.Name}}Repository) FindPage(req *req.PageReq) (*response.PageResult[*
 var modelTmpl = `package model
 
 import (
-	"github.com/zhoudm1743/go-flow/pkg/types"
+	"github.com/zhoudm1743/go-frame/pkg/types"
 )
 
 // {{.Name}} {{.Comment}}模型
@@ -403,12 +403,12 @@ var moduleTmpl = `package {{.Module}}
 import (
 	"fmt"
 
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/controller"
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/repository"
-	"github.com/zhoudm1743/go-flow/internal/{{.Module}}/service"
-	"github.com/zhoudm1743/go-flow/pkg/http"
-	"github.com/zhoudm1743/go-flow/pkg/http/unified"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/controller"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/repository"
+	"github.com/zhoudm1743/go-frame/internal/{{.Module}}/service"
+	"github.com/zhoudm1743/go-frame/pkg/http"
+	"github.com/zhoudm1743/go-frame/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.uber.org/fx"
 )
 

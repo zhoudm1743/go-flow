@@ -7,7 +7,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/sirupsen/logrus"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 )
 
 // FiberLogrusConfig 配置

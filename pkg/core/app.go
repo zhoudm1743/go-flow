@@ -8,11 +8,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/zhoudm1743/go-flow/pkg/cache"
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/database"
-	"github.com/zhoudm1743/go-flow/pkg/facades"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/cache"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/database"
+	"github.com/zhoudm1743/go-frame/pkg/facades"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.uber.org/fx"
 )
 

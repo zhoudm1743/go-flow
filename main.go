@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/zhoudm1743/go-flow/cmd"
-	"github.com/zhoudm1743/go-flow/pkg/core"
-	"github.com/zhoudm1743/go-flow/pkg/http"
+	"github.com/zhoudm1743/go-frame/cmd"
+	"github.com/zhoudm1743/go-frame/pkg/core"
+	"github.com/zhoudm1743/go-frame/pkg/http"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	}
 
 	// 创建应用
-	app := core.NewApp("go-flow")
+	app := core.NewApp("go-frame")
 
 	// 添加HTTP模块
 	app.WithOptions(http.UnifiedModule)

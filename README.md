@@ -1,16 +1,16 @@
-# GoFlow 框架
+# GoFrame 框架
 
 ## 框架概述
 
-GoFlow 是一个基于 Go 语言开发的高性能、模块化、易扩展的服务端框架，专注于提供简洁而强大的企业级应用开发体验。框架采用 Uber Fx 实现依赖注入和模块化管理，同时支持 Gin 和 Fiber 两种高性能 Web 框架，为开发者提供了统一的抽象接口和一致的开发体验。
+GoFrame 是一个基于 Go 语言开发的高性能、模块化、易扩展的服务端框架，专注于提供简洁而强大的企业级应用开发体验。框架采用 Uber Fx 实现依赖注入和模块化管理，同时支持 Gin 和 Fiber 两种高性能 Web 框架，为开发者提供了统一的抽象接口和一致的开发体验。
 ![优势](static/advantage.jpg)
 ### 架构总览
 
-下图展示了GoFlow框架的整体架构设计和各组件之间的关系：
+下图展示了GoFrame框架的整体架构设计和各组件之间的关系：
 
 ![架构设计](static/frame.jpg)
 
-从上图可以看出，GoFlow框架采用了清晰的分层设计：
+从上图可以看出，GoFrame框架采用了清晰的分层设计：
 - **应用层**：包含应用入口和命令行工具
 - **模块层**：包含各个业务功能模块
 - **框架核心**：提供核心功能和抽象接口
@@ -19,7 +19,7 @@ GoFlow 是一个基于 Go 语言开发的高性能、模块化、易扩展的服
 
 ### 设计理念
 
-GoFlow 框架的设计理念基于以下核心原则：
+GoFrame 框架的设计理念基于以下核心原则：
 
 1. **模块化优先**：应用被组织为独立的功能模块，每个模块包含完整的MVC结构，可以单独开发、测试和部署。
 2. **约定优于配置**：提供合理的默认设置和标准化的项目结构，减少配置负担。
@@ -29,7 +29,7 @@ GoFlow 框架的设计理念基于以下核心原则：
 
 ### 核心技术栈
 
-GoFlow 框架基于一系列精心选择的现代 Go 技术栈构建：
+GoFrame 框架基于一系列精心选择的现代 Go 技术栈构建：
 
 - **依赖注入**：Uber Fx
 - **Web框架**：Gin / Fiber (可切换)
@@ -42,7 +42,7 @@ GoFlow 框架基于一系列精心选择的现代 Go 技术栈构建：
 
 ### 适用场景
 
-GoFlow 框架适合以下应用场景：
+GoFrame 框架适合以下应用场景：
 
 - **微服务开发**：
   - 支持轻量级微服务架构，模块化设计便于拆分和组合服务
@@ -76,7 +76,7 @@ GoFlow 框架适合以下应用场景：
 
 ### 框架优势
 
-与其他Go框架相比，GoFlow具有以下显著优势：
+与其他Go框架相比，GoFrame具有以下显著优势：
 
 1. **双引擎支持**：同时支持Gin和Fiber两种高性能Web框架，开发者可根据需求灵活选择
 2. **统一抽象层**：提供统一的HTTP上下文、路由接口和中间件系统
@@ -86,7 +86,7 @@ GoFlow 框架适合以下应用场景：
 6. **可测试性**：依赖注入设计便于编写单元测试和集成测试
 7. **开箱即用**：内置常用功能，如参数验证、错误处理、日志记录等
 
-GoFlow 框架既适合初学者快速上手，也满足专业开发者对于架构和性能的高要求，是构建现代Go应用的理想选择。
+GoFrame 框架既适合初学者快速上手，也满足专业开发者对于架构和性能的高要求，是构建现代Go应用的理想选择。
 
 ## 目录
 
@@ -129,7 +129,7 @@ GoFlow 框架既适合初学者快速上手，也满足专业开发者对于架�
 
 ## 框架特性
 
-GoFlow 框架提供了丰富的特性，为Go应用开发提供全面支持：
+GoFrame 框架提供了丰富的特性，为Go应用开发提供全面支持：
 
 ### 核心架构
 
@@ -168,7 +168,7 @@ GoFlow 框架提供了丰富的特性，为Go应用开发提供全面支持：
    - 标准化的错误处理和响应格式
    - 请求上下文传递，支持请求追踪和监控
    
-   下图展示了一个HTTP请求在GoFlow框架中的完整生命周期：
+   下图展示了一个HTTP请求在GoFrame框架中的完整生命周期：
    
 ![生命周期](static/lifecircle.jpg)
 ### 数据访问
@@ -258,12 +258,12 @@ GoFlow 框架提供了丰富的特性，为Go应用开发提供全面支持：
 
 ## 项目结构
 
-GoFlow 框架采用清晰的目录结构，遵循 Go 项目标准布局和领域驱动设计理念，便于模块化开发和代码组织：
+GoFrame 框架采用清晰的目录结构，遵循 Go 项目标准布局和领域驱动设计理念，便于模块化开发和代码组织：
 
 ### 项目整体结构
 
 ```
-go-flow/
+go-frame/
 ├── cmd/                   # 命令行工具入口
 ├── config/                # 配置文件目录
 ├── internal/              # 应用内部模块
@@ -409,7 +409,7 @@ util/
 
 ### 模块依赖结构
 
-GoFlow框架的依赖注入结构：
+GoFrame框架的依赖注入结构：
 
 ```
 App
@@ -434,7 +434,7 @@ App
 
 ### 环境准备
 
-在开始使用 GoFlow 框架之前，请确保您的开发环境满足以下条件：
+在开始使用 GoFrame 框架之前，请确保您的开发环境满足以下条件：
 
 - Go 1.18 或更高版本 (建议使用最新的稳定版)
 - MySQL 5.7+ / PostgreSQL 10+ (可选，取决于你的数据库选择)
@@ -447,8 +447,8 @@ App
 
 ```bash
 # 克隆仓库
-git clone https://github.com/zhoudm1743/go-flow.git
-cd go-flow
+git clone https://github.com/zhoudm1743/go-frame.git
+cd go-frame
 
 # 安装依赖
 go mod tidy
@@ -458,7 +458,7 @@ go mod tidy
 
 ```bash
 # 使用模板创建新项目
-git clone https://github.com/zhoudm1743/go-flow-template.git my-project
+git clone https://github.com/zhoudm1743/go-frame-template.git my-project
 cd my-project
 
 # 初始化项目
@@ -467,7 +467,7 @@ go mod tidy
 
 ### 运行示例应用
 
-GoFlow 框架包含一个演示模块，可用于快速了解框架功能：
+GoFrame 框架包含一个演示模块，可用于快速了解框架功能：
 
 ```bash
 # 运行应用
@@ -485,7 +485,7 @@ go run main.go
 
 ```yaml
 app:
-  name: my-go-flow-app     # 应用名称
+  name: my-go-frame-app     # 应用名称
   version: 0.1.0           # 应用版本
   mode: dev                # 运行模式: dev, test, prod
 
@@ -505,7 +505,7 @@ database:
 
 ### 创建第一个应用模块
 
-GoFlow 框架提供了强大的代码生成功能，可以快速创建标准化的模块和组件：
+GoFrame 框架提供了强大的代码生成功能，可以快速创建标准化的模块和组件：
 
 #### 1. 创建产品模块
 
@@ -526,11 +526,11 @@ package main
 import (
     "os"
     
-    "github.com/zhoudm1743/go-flow/cmd"
-    "github.com/zhoudm1743/go-flow/internal/demo"
-    "github.com/zhoudm1743/go-flow/internal/product" // 导入新模块
-    "github.com/zhoudm1743/go-flow/pkg/core"
-    "github.com/zhoudm1743/go-flow/pkg/http"
+    "github.com/zhoudm1743/go-frame/cmd"
+    "github.com/zhoudm1743/go-frame/internal/demo"
+    "github.com/zhoudm1743/go-frame/internal/product" // 导入新模块
+    "github.com/zhoudm1743/go-frame/pkg/core"
+    "github.com/zhoudm1743/go-frame/pkg/http"
 )
 
 func main() {
@@ -541,7 +541,7 @@ func main() {
     }
     
     // 创建应用实例
-    app := core.NewApp("go-flow")
+    app := core.NewApp("go-frame")
     
     // 添加HTTP模块
     app.WithOptions(http.UnifiedModule)
@@ -659,7 +659,7 @@ func (r *ProductRepository) FindByNameLike(name string) ([]*model.Product, error
 
 ### 使用门面访问服务
 
-GoFlow 提供了便捷的门面模式访问核心服务：
+GoFrame 提供了便捷的门面模式访问核心服务：
 
 ```go
 // 数据库访问
@@ -689,8 +689,8 @@ package middleware
 import (
     "time"
     
-    "github.com/zhoudm1743/go-flow/pkg/http/unified"
-    "github.com/zhoudm1743/go-flow/pkg/log"
+    "github.com/zhoudm1743/go-frame/pkg/http/unified"
+    "github.com/zhoudm1743/go-frame/pkg/log"
 )
 
 // NewTimerMiddleware 创建请求计时中间件
@@ -717,7 +717,7 @@ func NewTimerMiddleware(logger log.Logger) unified.MiddlewareFunc {
 // 在 main.go 中注册全局中间件
 import (
     // 其他导入...
-    "github.com/zhoudm1743/go-flow/pkg/http/middleware"
+    "github.com/zhoudm1743/go-frame/pkg/http/middleware"
 )
 
 func main() {
@@ -827,7 +827,7 @@ func (s *ProductService) GetByID(id uint) (*model.Product, error) {
 
 ### 应用启动流程
 
-GoFlow 框架基于 Uber FX 构建的应用启动流程清晰而强大，包含完整的生命周期管理：
+GoFrame 框架基于 Uber FX 构建的应用启动流程清晰而强大，包含完整的生命周期管理：
 
 #### 1. 初始化阶段
 
@@ -835,7 +835,7 @@ GoFlow 框架基于 Uber FX 构建的应用启动流程清晰而强大，包含�
 
 ```go
 // 创建应用实例
-app := core.NewApp("go-flow")
+app := core.NewApp("go-frame")
 ```
 
 在 `NewApp` 方法内部，框架会进行以下操作：
@@ -1054,7 +1054,7 @@ fx.Provide(
 
 ### 模块化设计
 
-GoFlow 采用模块化设计，每个功能模块都是独立的，可以单独开发和测试：
+GoFrame 采用模块化设计，每个功能模块都是独立的，可以单独开发和测试：
 
 1. **模块接口**：每个模块需实现 `core.Module` 接口
    ```go
@@ -1109,9 +1109,9 @@ GoFlow 采用模块化设计，每个功能模块都是独立的，可以单独�
 
 ### 依赖注入
 
-GoFlow 使用 Uber FX 实现依赖注入，简化了组件间的依赖管理：
+GoFrame 使用 Uber FX 实现依赖注入，简化了组件间的依赖管理：
 
-下图展示了GoFlow框架中的依赖注入关系：
+下图展示了GoFrame框架中的依赖注入关系：
 
 ![依赖关系](static/dep.jpg)
 1. **服务提供**：通过 `fx.Provide` 注册服务构造函数
@@ -1172,7 +1172,7 @@ GoFlow 使用 Uber FX 实现依赖注入，简化了组件间的依赖管理：
 
 ## 路由与控制器
 
-GoFlow 框架提供了统一的路由注册机制和控制器实现方式，支持同时使用 Gin 和 Fiber 两种框架。
+GoFrame 框架提供了统一的路由注册机制和控制器实现方式，支持同时使用 Gin 和 Fiber 两种框架。
 
 ### 路由注册
 
@@ -1326,7 +1326,7 @@ func (c *ProductController) Create(ctx unified.Context) error {
 
 #### 统一上下文
 
-GoFlow 框架提供了统一的上下文接口 `unified.Context`，抽象了 Gin 和 Fiber 的上下文：
+GoFrame 框架提供了统一的上下文接口 `unified.Context`，抽象了 Gin 和 Fiber 的上下文：
 
 ```go
 // 上下文接口
@@ -1367,7 +1367,7 @@ type Context interface {
 
 ## HTTP中间件
 
-GoFlow 框架支持强大的中间件系统，可用于请求处理过程中的各种横切关注点。
+GoFrame 框架支持强大的中间件系统，可用于请求处理过程中的各种横切关注点。
 
 ### 中间件接口
 
@@ -1430,7 +1430,7 @@ router.GET("/admin", handler, AdminAuthMiddleware())
 
 ### 内置中间件
 
-GoFlow 框架提供了一些常用的内置中间件：
+GoFrame 框架提供了一些常用的内置中间件：
 
 #### 日志中间件
 
@@ -1798,7 +1798,7 @@ func (s *ProductService) GetCachedProduct(id uint) (*model.Product, error) {
 
 ### 仓库模式
 
-GoFlow 框架采用仓库模式设计数据访问层，主要特点：
+GoFrame 框架采用仓库模式设计数据访问层，主要特点：
 
 1. **封装数据操作**：隐藏数据访问细节
 2. **接口驱动**：定义清晰的接口，便于模拟测试
@@ -1825,7 +1825,7 @@ func NewProductRepository(db *gorm.DB) *ProductRepository {
 
 ### GORM集成
 
-GoFlow 使用 GORM 作为 ORM 框架，提供了以下功能：
+GoFrame 使用 GORM 作为 ORM 框架，提供了以下功能：
 
 1. **自动迁移**：在仓库初始化时自动创建和更新数据表
    ```go
@@ -1869,7 +1869,7 @@ GoFlow 使用 GORM 作为 ORM 框架，提供了以下功能：
 
 ### 数据查询
 
-GoFlow 框架中的仓库层提供了丰富的数据查询方法：
+GoFrame 框架中的仓库层提供了丰富的数据查询方法：
 
 1. **基本CRUD操作**
 
@@ -2004,7 +2004,7 @@ func (r *ProductRepository) ExecuteRawSQL(sql string, values ...interface{}) ([]
 
 ### 使用门面模式访问数据库
 
-除了通过仓库模式访问数据库外，GoFlow 框架还提供了数据库门面，可以在任何位置快速访问数据库：
+除了通过仓库模式访问数据库外，GoFrame 框架还提供了数据库门面，可以在任何位置快速访问数据库：
 
 ```go
 // 使用DB门面进行查询
@@ -2036,7 +2036,7 @@ func TransferStock(fromID, toID uint, amount int) error {
 
 ## 配置管理
 
-GoFlow 框架提供了灵活的配置管理系统，支持环境变量、配置文件和默认值的优先级管理。
+GoFrame 框架提供了灵活的配置管理系统，支持环境变量、配置文件和默认值的优先级管理。
 
 ### 配置结构
 
@@ -2103,7 +2103,7 @@ type RedisConfig struct {
 
 ```yaml
 app:
-  name: go-flow-demo
+  name: go-frame-demo
   version: 0.1.0
   mode: dev  # dev, test, prod
 
@@ -2241,11 +2241,11 @@ config.HTTP.Port = 9000
 
 ## 参数验证
 
-GoFlow 框架提供了统一的参数验证机制，支持自定义验证规则和中文错误提示。
+GoFrame 框架提供了统一的参数验证机制，支持自定义验证规则和中文错误提示。
 
 ### 自定义验证规则
 
-GoFlow 使用 `validator` 包进行参数验证，并提供了一些常用的验证规则。
+GoFrame 使用 `validator` 包进行参数验证，并提供了一些常用的验证规则。
 
 ```go
 // 在 pkg/validate/validate.go 中定义
@@ -2294,7 +2294,7 @@ func (v *Validation) ValidateField(field string, value interface{}) error {
 
 ### 中文错误提示
 
-GoFlow 框架提供了中文错误提示，使得错误信息更加友好。
+GoFrame 框架提供了中文错误提示，使得错误信息更加友好。
 
 ```go
 // 在 pkg/response/response.go 中定义
@@ -2390,7 +2390,7 @@ func (v *Validation) ValidateField(field string, value interface{}) error {
 
 ## 响应处理
 
-GoFlow 框架提供了统一的响应处理机制，包括成功和错误处理。
+GoFrame 框架提供了统一的响应处理机制，包括成功和错误处理。
 
 ### 统一响应格式
 
@@ -2441,7 +2441,7 @@ func UnifiedFailWithMsg(ctx unified.Context, code int, msg string) error {
 
 ### 错误处理
 
-GoFlow 框架提供了统一的错误处理机制，包括系统错误、业务错误等。
+GoFrame 框架提供了统一的错误处理机制，包括系统错误、业务错误等。
 
 ```go
 // 在 pkg/response/response.go 中定义
@@ -2490,7 +2490,7 @@ func UnifiedFailWithMsg(ctx unified.Context, code int, msg string) error {
 
 ### 分页响应
 
-GoFlow 框架提供了统一的响应格式，包括分页数据。
+GoFrame 框架提供了统一的响应格式，包括分页数据。
 
 ```go
 // 在 pkg/response/response.go 中定义
@@ -2539,7 +2539,7 @@ func UnifiedFailWithMsg(ctx unified.Context, code int, msg string) error {
 
 ## 缓存系统
 
-GoFlow 框架提供了灵活的缓存系统，支持多种缓存驱动，包括内存缓存和Redis。
+GoFrame 框架提供了灵活的缓存系统，支持多种缓存驱动，包括内存缓存和Redis。
 
 ### 缓存配置
 
@@ -2851,7 +2851,7 @@ err = json.Unmarshal([]byte(data.(string)), &user)
 
 ## 命令行工具
 
-GoFlow 框架提供了一些命令行工具，用于快速生成项目骨架和CRUD代码。
+GoFrame 框架提供了一些命令行工具，用于快速生成项目骨架和CRUD代码。
 
 ### 生成应用模块
 
@@ -2943,7 +2943,7 @@ go run main.go clean module product
 
 ## 日志系统
 
-GoFlow 框架集成了 Logrus 日志库，提供了灵活强大的日志功能。
+GoFrame 框架集成了 Logrus 日志库，提供了灵活强大的日志功能。
 
 ### 日志配置
 
@@ -3008,7 +3008,7 @@ func NewLogger(config *config.Config) (Logger, error) {
 
 ### 日志接口
 
-GoFlow 定义了统一的日志接口：
+GoFrame 定义了统一的日志接口：
 
 ```go
 // pkg/log/log.go
@@ -3105,7 +3105,7 @@ func (h *EmailHook) Fire(entry *logrus.Entry) error {
 ```go
 // 初始化带有通用字段的日志实例
 baseLogger := facades.Log.WithFields(log.Fields{
-    "app_name":    "go-flow",
+    "app_name":    "go-frame",
     "app_version": "1.0.0",
     "environment": "production",
 })
@@ -3120,8 +3120,8 @@ baseLogger.WithField("user_id", 123).Info("用户操作")
 对于文件日志，可以配合外部工具如 logrotate 实现日志分割：
 
 ```bash
-# /etc/logrotate.d/go-flow
-/path/to/go-flow.log {
+# /etc/logrotate.d/go-frame
+/path/to/go-frame.log {
     daily
     missingok
     rotate 14
@@ -3131,7 +3131,7 @@ baseLogger.WithField("user_id", 123).Info("用户操作")
     create 0640 www-data www-data
     sharedscripts
     postrotate
-        [ -f /var/run/go-flow.pid ] && kill -USR1 $(cat /var/run/go-flow.pid)
+        [ -f /var/run/go-frame.pid ] && kill -USR1 $(cat /var/run/go-frame.pid)
     endscript
 }
 ```
@@ -3141,7 +3141,7 @@ baseLogger.WithField("user_id", 123).Info("用户操作")
 ```go
 // 使用 lumberjack 进行日志分割
 rotateLogger := &lumberjack.Logger{
-    Filename:   "/path/to/go-flow.log",
+    Filename:   "/path/to/go-frame.log",
     MaxSize:    100, // MB
     MaxBackups: 30,
     MaxAge:     30,  // 天
@@ -3154,7 +3154,7 @@ logger.SetOutput(rotateLogger)
 
 ## 测试指南
 
-GoFlow 框架支持多种测试方式，包括单元测试、集成测试和功能测试。
+GoFrame 框架支持多种测试方式，包括单元测试、集成测试和功能测试。
 
 ### 单元测试
 
@@ -3169,8 +3169,8 @@ import (
 
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/mock"
-    "github.com/zhoudm1743/go-flow/internal/product/model"
-    "github.com/zhoudm1743/go-flow/internal/product/service"
+    "github.com/zhoudm1743/go-frame/internal/product/model"
+    "github.com/zhoudm1743/go-frame/internal/product/service"
 )
 
 // MockRepository 是一个仓库的模拟实现
@@ -3238,7 +3238,7 @@ import (
 
     "github.com/gin-gonic/gin"
     "github.com/stretchr/testify/assert"
-    "github.com/zhoudm1743/go-flow/pkg/response"
+    "github.com/zhoudm1743/go-frame/pkg/response"
 )
 
 // setupTestRouter 设置测试路由
@@ -3319,9 +3319,9 @@ import (
     "testing"
     
     "github.com/stretchr/testify/assert"
-    "github.com/zhoudm1743/go-flow/internal/product/model"
-    "github.com/zhoudm1743/go-flow/internal/product/repository"
-    "github.com/zhoudm1743/go-flow/internal/product/service"
+    "github.com/zhoudm1743/go-frame/internal/product/model"
+    "github.com/zhoudm1743/go-frame/internal/product/repository"
+    "github.com/zhoudm1743/go-frame/internal/product/service"
     "gorm.io/driver/sqlite"
     "gorm.io/gorm"
 )
@@ -3412,7 +3412,7 @@ go tool cover -html=coverage.out -o coverage.html
 
 ## 部署指南
 
-GoFlow 框架支持多种部署方式，包括直接部署、Docker容器和Kubernetes。
+GoFrame 框架支持多种部署方式，包括直接部署、Docker容器和Kubernetes。
 
 ### 编译应用
 
@@ -3420,16 +3420,16 @@ GoFlow 框架支持多种部署方式，包括直接部署、Docker容器和Kube
 
 ```bash
 # 编译当前平台
-go build -o go-flow main.go
+go build -o go-frame main.go
 
 # 交叉编译到Linux
-GOOS=linux GOARCH=amd64 go build -o go-flow-linux main.go
+GOOS=linux GOARCH=amd64 go build -o go-frame-linux main.go
 
 # 交叉编译到Windows
-GOOS=windows GOARCH=amd64 go build -o go-flow.exe main.go
+GOOS=windows GOARCH=amd64 go build -o go-frame.exe main.go
 
 # 编译优化
-go build -ldflags="-s -w" -o go-flow main.go
+go build -ldflags="-s -w" -o go-frame main.go
 ```
 
 ### 直接部署
@@ -3438,13 +3438,13 @@ go build -ldflags="-s -w" -o go-flow main.go
 
 ```bash
 # 运行应用
-./go-flow
+./go-frame
 
 # 使用nohup在后台运行
-nohup ./go-flow > app.log 2>&1 &
+nohup ./go-frame > app.log 2>&1 &
 
 # 使用systemd管理服务
-cat > /etc/systemd/system/go-flow.service << EOF
+cat > /etc/systemd/system/go-frame.service << EOF
 [Unit]
 Description=Go Flow Application
 After=network.target
@@ -3452,7 +3452,7 @@ After=network.target
 [Service]
 User=www-data
 WorkingDirectory=/path/to/app
-ExecStart=/path/to/app/go-flow
+ExecStart=/path/to/app/go-frame
 Restart=always
 RestartSec=3
 Environment=CONFIG_PATH=/path/to/config
@@ -3462,8 +3462,8 @@ WantedBy=multi-user.target
 EOF
 
 # 启用和启动服务
-systemctl enable go-flow.service
-systemctl start go-flow.service
+systemctl enable go-frame.service
+systemctl start go-frame.service
 ```
 
 ### Docker部署
@@ -3479,7 +3479,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o go-flow main.go
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o go-frame main.go
 
 # 使用轻量级的Alpine作为最终镜像
 FROM alpine:latest
@@ -3487,29 +3487,29 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates tzdata
 WORKDIR /app
 
-COPY --from=builder /app/go-flow .
+COPY --from=builder /app/go-frame .
 COPY --from=builder /app/config /app/config
 
 EXPOSE 8080
 
-CMD ["./go-flow"]
+CMD ["./go-frame"]
 ```
 
 构建和运行Docker镜像：
 
 ```bash
 # 构建镜像
-docker build -t go-flow:latest .
+docker build -t go-frame:latest .
 
 # 运行容器
-docker run -d --name go-flow -p 8080:8080 -v $(pwd)/config:/app/config go-flow:latest
+docker run -d --name go-frame -p 8080:8080 -v $(pwd)/config:/app/config go-frame:latest
 
 # 使用Docker Compose
 cat > docker-compose.yml << EOF
 version: '3'
 services:
   app:
-    image: go-flow:latest
+    image: go-frame:latest
     ports:
       - "8080:8080"
     volumes:
@@ -3551,22 +3551,22 @@ docker-compose up -d
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-flow
+  name: go-frame
   labels:
-    app: go-flow
+    app: go-frame
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: go-flow
+      app: go-frame
   template:
     metadata:
       labels:
-        app: go-flow
+        app: go-frame
     spec:
       containers:
-      - name: go-flow
-        image: go-flow:latest
+      - name: go-frame
+        image: go-frame:latest
         ports:
         - containerPort: 8080
         env:
@@ -3597,17 +3597,17 @@ spec:
       volumes:
       - name: config-volume
         configMap:
-          name: go-flow-config
+          name: go-frame-config
 
 ---
 # kubernetes/service.yaml
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-flow
+  name: go-frame
 spec:
   selector:
-    app: go-flow
+    app: go-frame
   ports:
   - port: 80
     targetPort: 8080
@@ -3618,19 +3618,19 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: go-flow-ingress
+  name: go-frame-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: go-flow.example.com
+  - host: go-frame.example.com
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: go-flow
+            name: go-frame
             port:
               number: 80
 ```
@@ -3639,7 +3639,7 @@ spec:
 
 ```bash
 # 创建ConfigMap
-kubectl create configmap go-flow-config --from-file=config/config.yaml
+kubectl create configmap go-frame-config --from-file=config/config.yaml
 
 # 应用清单文件
 kubectl apply -f kubernetes/deployment.yaml
@@ -3647,9 +3647,9 @@ kubectl apply -f kubernetes/service.yaml
 kubectl apply -f kubernetes/ingress.yaml
 
 # 查看状态
-kubectl get pods -l app=go-flow
-kubectl get services go-flow
-kubectl get ingress go-flow-ingress
+kubectl get pods -l app=go-frame
+kubectl get services go-frame
+kubectl get ingress go-frame-ingress
 ```
 
 ### 持续集成/部署(CI/CD)
@@ -3702,10 +3702,10 @@ jobs:
         go-version: 1.18
     
     - name: Build binary
-      run: CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o go-flow main.go
+      run: CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o go-frame main.go
     
     - name: Build Docker image
-      run: docker build -t go-flow:latest .
+      run: docker build -t go-frame:latest .
     
     - name: Login to Docker registry
       uses: docker/login-action@v1
@@ -3715,8 +3715,8 @@ jobs:
     
     - name: Push Docker image
       run: |
-        docker tag go-flow:latest zhoudm1743/go-flow:latest
-        docker push zhoudm1743/go-flow:latest
+        docker tag go-frame:latest zhoudm1743/go-frame:latest
+        docker push zhoudm1743/go-frame:latest
   
   deploy:
     needs: build

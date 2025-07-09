@@ -7,8 +7,8 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
-	"github.com/zhoudm1743/go-flow/pkg/cache"
-	"github.com/zhoudm1743/go-flow/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/cache"
+	"github.com/zhoudm1743/go-frame/pkg/config"
 )
 
 func TestFileCache(t *testing.T) {

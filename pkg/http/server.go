@@ -9,11 +9,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/recover"
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/http/middleware"
-	ctx "github.com/zhoudm1743/go-flow/pkg/http/unified"
-	"github.com/zhoudm1743/go-flow/pkg/log"
-	"github.com/zhoudm1743/go-flow/pkg/response"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/http/middleware"
+	ctx "github.com/zhoudm1743/go-frame/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/response"
 	"go.uber.org/fx"
 )
 

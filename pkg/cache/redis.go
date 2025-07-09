@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/redis/go-redis/v9"
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.uber.org/fx"
 )
 

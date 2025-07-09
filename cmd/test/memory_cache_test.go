@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/zhoudm1743/go-flow/pkg/cache"
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/cache"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 )
 
 // 创建测试用的内存缓存实例

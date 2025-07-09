@@ -1,4 +1,4 @@
-module github.com/zhoudm1743/go-flow
+module github.com/zhoudm1743/go-frame
 
 go 1.24.0
 

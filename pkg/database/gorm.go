@@ -7,8 +7,8 @@ import (
 	"time"
 
 	"github.com/glebarez/sqlite" // 纯Go的SQLite实现，不需要CGO
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.uber.org/fx"
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/postgres"

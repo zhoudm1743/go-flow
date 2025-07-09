@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 )
 
 func (z ZMembers) Len() int           { return len(z) }

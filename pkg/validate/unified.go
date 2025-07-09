@@ -7,8 +7,8 @@ import (
 
 	"github.com/go-playground/validator/v10"
 	"github.com/gofiber/fiber/v2"
-	"github.com/zhoudm1743/go-flow/pkg/http/unified"
-	"github.com/zhoudm1743/go-flow/pkg/response"
+	"github.com/zhoudm1743/go-frame/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/response"
 )
 
 var UnifiedVerify = unifiedVerifyUtil{}

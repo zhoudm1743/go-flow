@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 )
 
 // CacheHelper 缓存助手类，提供更高级的封装

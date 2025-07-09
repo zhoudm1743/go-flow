@@ -1,5 +1,5 @@
 app:
-  name: go-flow-demo
+  name: go-frame-demo
   version: 0.1.0
   mode: dev
 
@@ -12,7 +12,7 @@ http:
 
 database:
   driver: sqlite
-  dsn: ./go-flow.db
+  dsn: ./go-frame.db
   max_open_conns: 100
   max_idle_conns: 10
   conn_max_lifetime: 3600s

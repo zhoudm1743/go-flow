@@ -2,7 +2,7 @@ package validate
 
 import (
 	"github.com/go-playground/validator/v10"
-	"github.com/zhoudm1743/go-flow/pkg/response"
+	"github.com/zhoudm1743/go-frame/pkg/response"
 	"go.uber.org/fx"
 )
 

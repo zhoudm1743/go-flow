@@ -3,7 +3,7 @@ package response
 import (
 	"net/http"
 
-	"github.com/zhoudm1743/go-flow/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/http/unified"
 )
 
 // UnifiedResponse 统一响应结构体

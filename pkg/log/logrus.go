@@ -8,7 +8,7 @@ import (
 
 	"github.com/mattn/go-colorable"
 	"github.com/sirupsen/logrus"
-	"github.com/zhoudm1743/go-flow/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/config"
 	"go.uber.org/fx"
 )
 

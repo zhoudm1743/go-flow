@@ -52,7 +52,7 @@ type ArticleRequest struct {
 使用示例：
 
 1. 在启动时初始化验证器（通常在main.go或bootstrap中）：
-   import "github.com/zhoudm1743/go-flow/pkg/validate"
+   import "github.com/zhoudm1743/go-frame/pkg/validate"
 
    func init() {
        if err := validate.InitValidator(); err != nil {

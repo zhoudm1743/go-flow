@@ -7,10 +7,10 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/zhoudm1743/go-flow/pkg/config"
-	"github.com/zhoudm1743/go-flow/pkg/http/middleware"
-	ctx "github.com/zhoudm1743/go-flow/pkg/http/unified"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/config"
+	"github.com/zhoudm1743/go-frame/pkg/http/middleware"
+	ctx "github.com/zhoudm1743/go-frame/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 	"go.uber.org/fx"
 )
 

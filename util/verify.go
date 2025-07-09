@@ -8,9 +8,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
-	"github.com/zhoudm1743/go-flow/pkg/http/unified"
-	"github.com/zhoudm1743/go-flow/pkg/response"
-	"github.com/zhoudm1743/go-flow/pkg/validate"
+	"github.com/zhoudm1743/go-frame/pkg/http/unified"
+	"github.com/zhoudm1743/go-frame/pkg/response"
+	"github.com/zhoudm1743/go-frame/pkg/validate"
 )
 
 var VerifyUtil = verifyUtil{}

@@ -2,7 +2,7 @@ package facades
 
 import (
 	"github.com/sirupsen/logrus"
-	"github.com/zhoudm1743/go-flow/pkg/log"
+	"github.com/zhoudm1743/go-frame/pkg/log"
 )
 
 // Debug 记录调试级别日志
