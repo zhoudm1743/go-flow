@@ -36,7 +36,7 @@ GoFrame 框架基于一系列精心选择的现代 Go 技术栈构建：
 - **ORM框架**：GORM
 - **配置管理**：Viper
 - **日志系统**：Logrus
-- **缓存支持**：Redis / 内存缓存
+- **缓存支持**：Redis / 内存/ 文件
 - **参数验证**：validator
 - **命令行工具**：Cobra
 
@@ -1033,7 +1033,7 @@ fx.Provide(
 1. **配置加载**：读取 `config/config.yaml` 文件和环境变量
 2. **日志系统初始化**：根据配置设置日志级别和输出方式
 3. **数据库连接**：建立数据库连接池，设置最大连接数
-4. **缓存系统初始化**：连接Redis或创建内存缓存
+4. **缓存系统初始化**：连接Redis或创建内存、文件缓存
 5. **门面注册**：设置全局服务访问点
 6. **HTTP服务初始化**：创建Gin或Fiber实例，设置中间件
 7. **路由注册**：各模块注册自己的路由到HTTP服务
@@ -2087,8 +2087,9 @@ type LogConfig struct {
     OutputPath string
 }
 
-// RedisConfig Redis缓存配置
-type RedisConfig struct {
+// CacheConfig Cache缓存配置
+type CacheConfig struct {
+    Type     string
     Host     string
     Port     int
     Password string
@@ -2546,7 +2547,8 @@ GoFrame 框架提供了灵活的缓存系统，支持多种缓存驱动，包括
 缓存配置在 `config.yaml` 中定义：
 
 ```yaml
-redis:
+cache:
+  type: memory     # 缓存类型: memory、redis 或 file
   host: localhost
   port: 6379
   password: ""

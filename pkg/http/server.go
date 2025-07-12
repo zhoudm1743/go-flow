@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -16,6 +17,130 @@ import (
 	"github.com/zhoudm1743/go-frame/pkg/response"
 	"go.uber.org/fx"
 )
+
+// logrusAdapter 将日志重定向到logrus
+type logrusAdapter struct {
+	logger log.Logger
+	level  string
+}
+
+// Write 实现io.Writer接口
+func (w *logrusAdapter) Write(p []byte) (n int, err error) {
+	text := string(p)
+	text = strings.TrimSuffix(text, "\n") // 去除尾部换行符
+
+	switch w.level {
+	case "debug":
+		w.logger.Debug(text)
+	case "info":
+		w.logger.Info(text)
+	case "warn", "warning":
+		w.logger.Warn(text)
+	case "error":
+		w.logger.Error(text)
+	default:
+		w.logger.Info(text)
+	}
+
+	return len(p), nil
+}
+
+// routeLoggerDecorator 装饰Router接口，记录路由注册
+type routeLoggerDecorator struct {
+	ctx.Router
+	logger log.Logger
+	prefix string // 添加前缀字段
+}
+
+// 记录路由注册的辅助函数
+func (r *routeLoggerDecorator) logRoute(method string, path string) {
+	// 构建完整路径
+	fullPath := path
+	if r.prefix != "" && !strings.HasPrefix(path, "/") {
+		fullPath = r.prefix + "/" + path
+	} else if r.prefix != "" {
+		fullPath = r.prefix + path
+	}
+
+	// 规范化路径，避免双斜杠
+	fullPath = strings.Replace(fullPath, "//", "/", -1)
+
+	// 为HTTP方法添加颜色
+
+	r.logger.WithFields(map[string]interface{}{
+		"method": method,
+	}).Debug(fullPath)
+}
+
+// Handle 实现Router接口，记录路由注册
+func (r *routeLoggerDecorator) Handle(method ctx.HTTPMethod, path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute(string(method), path)
+	return r.Router.Handle(method, path, handler, middlewares...)
+}
+
+// GET 实现Router接口
+func (r *routeLoggerDecorator) GET(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("GET", path)
+	return r.Router.GET(path, handler, middlewares...)
+}
+
+// POST 实现Router接口
+func (r *routeLoggerDecorator) POST(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("POST", path)
+	return r.Router.POST(path, handler, middlewares...)
+}
+
+// PUT 实现Router接口
+func (r *routeLoggerDecorator) PUT(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("PUT", path)
+	return r.Router.PUT(path, handler, middlewares...)
+}
+
+// DELETE 实现Router接口
+func (r *routeLoggerDecorator) DELETE(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("DELETE", path)
+	return r.Router.DELETE(path, handler, middlewares...)
+}
+
+// PATCH 实现Router接口
+func (r *routeLoggerDecorator) PATCH(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("PATCH", path)
+	return r.Router.PATCH(path, handler, middlewares...)
+}
+
+// HEAD 实现Router接口
+func (r *routeLoggerDecorator) HEAD(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("HEAD", path)
+	return r.Router.HEAD(path, handler, middlewares...)
+}
+
+// OPTIONS 实现Router接口
+func (r *routeLoggerDecorator) OPTIONS(path string, handler ctx.HandlerFunc, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	r.logRoute("OPTIONS", path)
+	return r.Router.OPTIONS(path, handler, middlewares...)
+}
+
+// Group 实现Router接口
+func (r *routeLoggerDecorator) Group(prefix string, middlewares ...ctx.MiddlewareFunc) ctx.Router {
+	// 构建新的前缀
+	newPrefix := prefix
+	if r.prefix != "" {
+		if strings.HasPrefix(prefix, "/") {
+			newPrefix = r.prefix + prefix
+		} else {
+			newPrefix = r.prefix + "/" + prefix
+		}
+		// 规范化路径，避免双斜杠
+		newPrefix = strings.Replace(newPrefix, "//", "/", -1)
+	}
+
+	// 创建一个新的装饰器包装原始路由器的Group返回值
+	return &routeLoggerDecorator{
+		Router: r.Router.Group(prefix, middlewares...),
+		logger: r.logger,
+		prefix: newPrefix,
+	}
+}
 
 // Server 统一的HTTP服务器接口
 type Server interface {
@@ -112,6 +237,19 @@ func NewUnifiedServer(config *ServerConfig, logger log.Logger) *UnifiedServer {
 
 // 初始化Gin引擎
 func (s *UnifiedServer) initGin() {
+	// 首先禁用Gin自带的路由日志输出
+	gin.DisableBindValidation()
+	gin.DisableConsoleColor()
+
+	// 重定向Gin日志到我们的logrus
+	gin.DefaultWriter = &logrusAdapter{logger: s.logger, level: "info"}
+	gin.DefaultErrorWriter = &logrusAdapter{logger: s.logger, level: "error"}
+
+	// 禁用Gin自带的路由打印功能
+	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
+		// 不做任何输出，我们会使用routeLoggerDecorator来处理
+	}
+
 	// 设置模式
 	if s.config.Debug {
 		gin.SetMode(gin.DebugMode)
@@ -150,8 +288,15 @@ func (s *UnifiedServer) initGin() {
 	// 创建统一路由器
 	s.router = ctx.NewRouter(ctx.GinEngine, s.ginEngine, nil)
 
+	// 包装路由器，增加日志记录功能
+	s.router = &routeLoggerDecorator{
+		Router: s.router,
+		logger: s.logger,
+		prefix: "", // 明确设置初始前缀为空
+	}
+
 	// 记录启动信息
-	s.logger.Info("[GIN] 服务器初始化完成")
+	s.logger.Info("Gin服务器初始化完成")
 }
 
 // 初始化Fiber引擎
@@ -189,8 +334,16 @@ func (s *UnifiedServer) initFiber() {
 	// 创建统一路由器
 	s.router = ctx.NewRouter(ctx.FiberEngine, nil, s.fiberApp)
 
+	// 通过路由装饰器拦截路由注册
+	originalRouter := s.router
+	s.router = &routeLoggerDecorator{
+		Router: originalRouter,
+		logger: s.logger,
+		prefix: "", // 明确设置初始前缀为空
+	}
+
 	// 记录启动信息
-	s.logger.Info("[FIBER] 服务器初始化完成")
+	s.logger.Info("Fiber服务器初始化完成")
 }
 
 // Router 实现Server接口

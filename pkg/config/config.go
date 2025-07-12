@@ -131,7 +131,7 @@ func setDefaultConfig(config *Config) {
 		config.HTTP.Port = 8080
 	}
 	if config.HTTP.Engine == "" {
-		config.HTTP.Engine = "gin" // 默认使用Gin引擎
+		config.HTTP.Engine = "fiber" // 默认使用Gin引擎
 	}
 	if config.HTTP.ReadTimeout == 0 {
 		config.HTTP.ReadTimeout = 10 * time.Second

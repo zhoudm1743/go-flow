@@ -4,6 +4,7 @@ import (
 	"os"
 
 	"github.com/zhoudm1743/go-frame/cmd"
+	"github.com/zhoudm1743/go-frame/internal/module"
 	"github.com/zhoudm1743/go-frame/pkg/core"
 	"github.com/zhoudm1743/go-frame/pkg/http"
 )
@@ -20,6 +21,9 @@ func main() {
 
 	// 添加HTTP模块
 	app.WithOptions(http.UnifiedModule)
+
+	// 添加业务模块
+	app.AddModule(module.NewModule())
 
 	// 启动应用
 	app.Run()

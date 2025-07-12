@@ -23,6 +23,9 @@ type EngineParams struct {
 
 // NewGinEngine 创建Gin引擎
 func NewGinEngine(p EngineParams) *gin.Engine {
+	// 将Gin的默认日志输出重定向到logrus（在设置模式前执行）
+	middleware.GinLogToLogrus(p.Logger)
+
 	// 设置运行模式
 	switch p.Config.App.Mode {
 	case "prod":
@@ -32,9 +35,6 @@ func NewGinEngine(p EngineParams) *gin.Engine {
 	default:
 		gin.SetMode(gin.DebugMode)
 	}
-
-	// 将Gin的默认日志输出重定向到logrus
-	middleware.GinLogToLogrus(p.Logger)
 
 	engine := gin.New()
 

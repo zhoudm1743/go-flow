@@ -144,60 +144,81 @@ func LogrusLogger(logger log.Logger) gin.HandlerFunc {
 	}
 }
 
+// GinLogToLogrus 将Gin框架自身的日志输出重定向到logrus
+func GinLogToLogrus(logger log.Logger) {
+	// 完全禁用Gin的控制台颜色
+	gin.DisableConsoleColor()
+
+	// 创建一个自定义的Writer，将日志输出重定向到logrus
+	ginLogger := &LogrusWriter{logger: logger}
+	gin.DefaultWriter = ginLogger
+	gin.DefaultErrorWriter = ginLogger
+
+	// 禁止Gin在启动时打印路由
+	gin.DebugPrintRouteFunc = func(httpMethod, absolutePath, handlerName string, nuHandlers int) {
+		fields := logrus.Fields{
+			"method":      httpMethod,
+			"path":        absolutePath,
+			"handler":     handlerName,
+			"handlers_no": nuHandlers,
+		}
+		logger.WithFields(fields).Debug("注册路由")
+	}
+}
+
 // LogrusWriter 实现了io.Writer接口，用于重定向Gin的日志输出到logrus
 type LogrusWriter struct {
 	logger log.Logger
 }
 
-// NewLogrusWriter 创建一个将Gin日志输出到logrus的适配器
-func NewLogrusWriter(logger log.Logger) *LogrusWriter {
-	return &LogrusWriter{logger: logger}
-}
-
 // Write 实现io.Writer接口
 func (w *LogrusWriter) Write(p []byte) (n int, err error) {
 	text := string(p)
+	text = strings.TrimSuffix(text, "\n") // 去除尾部换行符
 
-	// 简化Gin路由日志，去掉处理器路径和-->符号
+	// 不同类型的日志采用不同的处理方式
 	if strings.Contains(text, "[GIN-debug]") {
-		// 处理路由注册信息
-		if strings.Contains(text, "-->") {
-			// 提取关键信息：方法和路由
-			parts := strings.Split(text, "-->")
-			if len(parts) > 0 {
-				methodAndPath := strings.TrimSpace(parts[0])
-				// 移除[GIN-debug]前缀，保留方法和路径
-				methodAndPath = strings.Replace(methodAndPath, "[GIN-debug]", "", 1)
-				methodAndPath = strings.TrimSpace(methodAndPath)
+		// 提取真正的消息内容
+		message := strings.TrimPrefix(text, "[GIN-debug] ")
 
-				// 提取HTTP方法和路径
-				methodParts := strings.Fields(methodAndPath)
-				if len(methodParts) >= 2 {
-					method := methodParts[0]
-					path := methodParts[1]
+		// 解析路由注册信息
+		if strings.Contains(message, "-->") {
+			// 提取HTTP方法、路径和处理器信息
+			parts := strings.Split(message, "-->")
+			if len(parts) >= 2 {
+				methodPath := strings.TrimSpace(parts[0])
+				handler := strings.TrimSpace(parts[1])
 
-					// 为HTTP方法添加颜色
-					coloredMethod := getMethodColor(method) + method + resetColor
-					text = fmt.Sprintf("[GIN] %s %s", coloredMethod, path)
-				} else {
-					text = fmt.Sprintf("[GIN] %s", methodAndPath)
+				// 进一步解析方法和路径
+				fields := strings.Fields(methodPath)
+				if len(fields) >= 2 {
+					method := fields[0]
+					path := fields[1]
+
+					// 使用logrus字段记录
+					w.logger.WithFields(logrus.Fields{
+						"component": "gin",
+						"method":    method,
+						"path":      path,
+						"handler":   handler,
+					}).Debug("路由注册")
 				}
 			}
-		} else if strings.Contains(text, "Running in") {
-			// 处理Gin模式信息
-			text = strings.Replace(text, "[GIN-debug] [WARNING]", "[GIN]", 1)
+		} else if strings.Contains(message, "Listening and serving HTTP") {
+			// 服务器启动信息
+			w.logger.WithField("component", "gin").Info(message)
 		} else {
-			// 处理其他Gin调试信息
-			text = strings.Replace(text, "[GIN-debug]", "[GIN]", 1)
+			// 其他调试信息
+			w.logger.WithField("component", "gin").Debug(message)
 		}
+	} else if strings.Contains(text, "[GIN]") {
+		// GIN前缀的非调试日志
+		message := strings.TrimPrefix(text, "[GIN] ")
+		w.logger.WithField("component", "gin").Info(message)
+	} else {
+		// 其他日志
+		w.logger.Info(text)
 	}
 
-	w.logger.Debug(text)
 	return len(p), nil
-}
-
-// GinLogToLogrus 将Gin框架自身的日志输出重定向到logrus
-func GinLogToLogrus(logger log.Logger) {
-	gin.DefaultWriter = NewLogrusWriter(logger)
-	gin.DefaultErrorWriter = NewLogrusWriter(logger)
 }

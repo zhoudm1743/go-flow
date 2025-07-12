@@ -11,10 +11,6 @@ type Module interface {
 
 	// Options 模块配置选项
 	Options() fx.Option
-
-	// RoutePrefix 模块路由前缀，可选实现
-	// 如果返回空字符串则不使用前缀
-	RoutePrefix() string
 }
 
 // RegisterRoutes 注册路由接口
